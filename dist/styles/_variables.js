@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.theme = exports.animate = exports.fonts = exports.color = exports.maxContainer = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n    from {\n      transform: rotate(360deg);\n    }\n\n    to {\n      transform: rotate(0deg);\n    }\n  '], ['\n    from {\n      transform: rotate(360deg);\n    }\n\n    to {\n      transform: rotate(0deg);\n    }\n  ']);
+var _templateObject = _taggedTemplateLiteral(['\n    from {\n      transform: rotate(0deg);\n    }\n\n    to {\n      transform: rotate(360deg);\n    }\n  '], ['\n    from {\n      transform: rotate(0deg);\n    }\n\n    to {\n      transform: rotate(360deg);\n    }\n  ']);
 
 var _styledComponents = require('styled-components');
 
@@ -54,30 +54,17 @@ var fonts = exports.fonts = {
     small: '0.875em',
     label: '0.75em'
   }
-  // h1: '56px',
-  // h2: '40px',
-  // h3: '30px',
-  // h4: '22px',
-  // p: '16px',
-  // small: '14px',
-  // label: '12px',
+};
 
-};var animate = exports.animate = {
+var animate = exports.animate = {
   spin: (0, _styledComponents.keyframes)(_templateObject),
   time: {
     loading: '1s'
   },
   transition: 'all 0.5s ease'
+};
 
-  // export const defaultTheme = {
-  //   color: {
-  //     primaryColor: 'red',
-  //   },
-  //   fonts,
-  //   animate,
-  // }
-
-};var textColor = function textColor(props) {
+var textColor = function textColor(props) {
   return props.color ? props.color : props.theme.color ? props.theme.color.dark : color.dark;
 };
 

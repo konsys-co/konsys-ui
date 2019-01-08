@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ButtonTest = exports.InputWithLabel = exports.Input = exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.CheckboxGroup = exports.RadioGroup = exports.Checkbox = exports.Radio = exports.Loading = exports.Icon = exports.Button = undefined;
+exports.InputWithLabel = exports.Input = exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.CheckboxGroup = exports.RadioGroup = exports.Checkbox = exports.Radio = exports.Loading = exports.Icon = exports.Button = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -52,19 +52,15 @@ var Document = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        _styledComponents.ThemeProvider,
-        { theme: { color: { primaryColor: 'purple' } } },
+        'div',
+        null,
         _react2.default.createElement(
-          'div',
+          'h3',
           null,
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ks-common-component document page'
-          ),
-          _react2.default.createElement(_button.ButtonTest, { icon: 'icon-arrow-right', rightIcon: true, margin: '24px', text: 'test' }),
-          _react2.default.createElement(_button2.default, { icon: 'icon-refresh', onlyIcon: true, spinIcon: true })
-        )
+          'ks-common-component document page'
+        ),
+        _react2.default.createElement(_button.ButtonTest, { icon: 'icon-arrow-right', rightIcon: true, margin: '24px', text: 'test' }),
+        _react2.default.createElement(_button2.default, { icon: 'icon-refresh', onlyIcon: true, spinIcon: true })
       );
     }
   }]);
@@ -88,5 +84,4 @@ exports.SmallText = _text.SmallText;
 exports.Label = _text.Label;
 exports.Input = _input.Input;
 exports.InputWithLabel = _input.InputWithLabel;
-exports.ButtonTest = _button.ButtonTest;
 exports.default = Document;

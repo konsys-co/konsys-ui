@@ -5,26 +5,16 @@ import {
   LoadingWrapper,
 } from './styled'
 
-/*
-==== PROPS ====
-
-text:         loading text
-large/small:  size
-vertical:
-
-================
-*/
-
 const Loading = props => (
   <LoadingWrapper
     {...props}
   >
-    <Icon spin icon='icon-reload' />{props.text ? props.text : 'loading'}
+    <Icon spin icon='fal fa-spinner-third' />{props.text ? props.text : 'loading'}
   </LoadingWrapper>
 )
 
 Loading.propTypes = {
-  test: PropTypes.string,
+  text: PropTypes.string,
   vertical: PropTypes.bool,
   large: PropTypes.bool,
   small: PropTypes.bool,

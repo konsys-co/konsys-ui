@@ -25,23 +25,6 @@ var _variables = require('../../styles/_variables');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
-==== PROPS ====
-
-large/small:         		size
-margin:									margin of input
-padding:								padding of input
-rectangle:							set input border radius to 0
-color:									set color of input
-prefix/suffix:					send prefix/suffix set in input (only Icon)
-width:									set width of input
-state:									set state of input ( error / success / warning )
-ghost:									set background of input to transparent
-disabled:								set input to disabled
-
-================
-*/
-
 var Input = exports.Input = function Input(props) {
 	return _react2.default.createElement(
 		_styled.InputWrapper,
@@ -74,21 +57,9 @@ Input.propTypes = {
 	disabled: _propTypes.bool,
 	large: _propTypes.bool,
 	small: _propTypes.bool
+};
 
-	/*
- ==== PROPS ====
- 
- position:         			set position of text ( top / left / right )
- width:									set width of input
- margin:									set margin of wrapper
- padding:								set padding of wrapper
- title:									object with color / icon / text to set title props
- input:									object with props of input
- 
- ================
- */
-
-};var InputWithLabel = exports.InputWithLabel = function InputWithLabel(props) {
+var InputWithLabel = exports.InputWithLabel = function InputWithLabel(props) {
 	return _react2.default.createElement(
 		_styled.InputWithLabelWrapper,
 		{ margin: props.margin, padding: props.padding, position: props.position },
@@ -98,7 +69,7 @@ Input.propTypes = {
 			props.title.icon && _react2.default.createElement(_icon2.default, { margin: '0 8px 0 0', icon: props.title.icon }),
 			_react2.default.createElement(
 				_text.P,
-				null,
+				{ bold: props.title.bold },
 				props.title.text
 			)
 		),
@@ -113,7 +84,8 @@ InputWithLabel.propTypes = {
 	title: (0, _propTypes.shape)({
 		text: _propTypes.string.isRequired,
 		icon: _propTypes.string,
-		color: _propTypes.string
+		color: _propTypes.string,
+		bold: _propTypes.bool
 	}).isRequired,
 	input: _propTypes.object
 };

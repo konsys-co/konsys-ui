@@ -4,16 +4,6 @@ import {
   IconStyled,
 } from './styled'
 
-/*
-==== PROPS ====
-
-icon:         class of icon
-spin:         set icon to spin
-color:        set color of icon
-
-================
-*/
-
 const Icon = props => (
   <IconStyled
     {...props}

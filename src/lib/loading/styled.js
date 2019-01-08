@@ -11,6 +11,7 @@ export const LoadingWrapper = styled.div`
   > ${IconStyled} {
     margin: 0 0.5em 0 0;
     font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small)};
+    color: ${mainColor};
   }
   ${props => props.vertical && css`
     display: inline-flex;

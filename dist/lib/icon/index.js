@@ -18,16 +18,6 @@ var _styled = require('./styled');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
-==== PROPS ====
-
-icon:         class of icon
-spin:         set icon to spin
-color:        set color of icon
-
-================
-*/
-
 var Icon = function Icon(props) {
   return _react2.default.createElement(_styled.IconStyled, _extends({}, props, {
     className: props.icon

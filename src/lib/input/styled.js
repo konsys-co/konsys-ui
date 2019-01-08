@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { theme, color, fonts, animate } from '../../styles/_variables'
 import IconStyled from '../icon/styled'
-import { Label, P } from '../text'
+import { Label } from '../text'
 
 const defaultMinWidth = '210px'
 const defaultLargeMinWidth = '300px'
@@ -50,10 +50,10 @@ export const InputElement = styled.input`
 	}
 	${props => css`
 		${props.prefix && css`
-			padding-left: 30px;
+			padding-left: 28px;
 		`}
 		${props.suffix && css`
-			padding-right: 30px;
+			padding-right: 28px;
 		`}
 		${props.width && css`
 			min-width: ${props.width};
@@ -97,6 +97,10 @@ export const InputElement = styled.input`
 				color: ${props.state === 'error' ? theme.color.error : props.state === 'success' ? theme.color.success : props.state === 'warning' && theme.color.warning} !important;
 			}
 		`}
+		${props.padding && css`
+			padding: ${props.padding};
+		`
+		}
 		&:disabled {
 			cursor: not-allowed;
 			background-color: ${color.light};
@@ -111,9 +115,10 @@ export const InputElement = styled.input`
 
 export const InputWrapper = styled.div`
 	display: inline-block;
-	margin: ${props => (props.margin ? props.margin : 0)};
-	padding: ${props => (props.padding ? props.padding : 0)};
-	width: ${props => (props.width ? props.width : props.large ? defaultLargeMinWidth : props.small ? defaultSmallMinWidth : defaultMinWidth)};
+	${props => css`
+		${props.margin && css`margin: ${props.margin};`}
+		${props.width && css`width: ${props.width};`}
+	`}
 	> ${Label} {
 		display: block;
 		word-break: break-all;
@@ -136,9 +141,10 @@ export const InputWithLabelWrapper = styled.div`
 	> ${LabelWrapper} {
 		display: inline-flex;
 		align-items: baseline;
-		margin: ${props => (props.position === 'left' ? '0 16px 0 0' : props.position === 'right' ? '0 0 0 8px' : '0 0 8px')};
+		margin: ${props => (props.position === 'left' ? '0 24px 0 0' : props.position === 'right' ? '0 0 0 24px' : '0 0 16px')};
 		white-space: nowrap;
 		order: ${props => (props.position === 'right' ? 1 : 0)};
+		font-family: ${props => (props.theme.fonts ? props.theme.fonts.style.extraLight : fonts.style.extraLight)};
 		> ${IconStyled} {
 			font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small)};
 		}

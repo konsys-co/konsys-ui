@@ -44,22 +44,15 @@ export const fonts = {
     label: '0.75em',
   },
 }
-// h1: '56px',
-// h2: '40px',
-// h3: '30px',
-// h4: '22px',
-// p: '16px',
-// small: '14px',
-// label: '12px',
 
 export const animate = {
   spin: keyframes`
     from {
-      transform: rotate(360deg);
+      transform: rotate(0deg);
     }
 
     to {
-      transform: rotate(0deg);
+      transform: rotate(360deg);
     }
   `,
   time: {
@@ -67,14 +60,6 @@ export const animate = {
   },
   transition: 'all 0.5s ease',
 }
-
-// export const defaultTheme = {
-//   color: {
-//     primaryColor: 'red',
-//   },
-//   fonts,
-//   animate,
-// }
 
 const textColor = props => (props.color ? props.color : props.theme.color ? props.theme.color.dark : color.dark)
 

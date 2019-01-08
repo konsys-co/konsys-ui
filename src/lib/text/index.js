@@ -13,51 +13,56 @@ export const textStyle = css`
 
 export const H1 = styled.h1`
   font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.heading : fonts.size.heading)};
-  ${textStyle};
   font-family: ${fonts.style.semiBold};
+  ${textStyle};
 `
 
 export const H2 = styled.h2`
   font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.subHeading : fonts.size.subHeading)};
-  ${textStyle};
   font-family: ${fonts.style.semiBold};
+  ${textStyle};
 `
 
 export const H3 = styled.h3`
   font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.title : fonts.size.title)};
-  ${textStyle};
+  font-family: ${fonts.style.extraLight};
   ${props => props.bold && css`
     font-family: ${fonts.style.medium};
   `}
+  ${textStyle};
 `
 
 export const H4 = styled.h4`
   font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.subTitle : fonts.size.subTitle)};
-  ${textStyle};
+  font-family: ${fonts.style.extraLight};
   ${props => props.bold && css`
     font-family: ${fonts.style.medium};
   `}
+  ${textStyle};
 `
 
 export const P = styled.p`
   font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.normal : fonts.size.normal)};
-  ${textStyle};
+  font-family: ${fonts.style.extraLight};
   ${props => props.bold && css`
     font-family: ${fonts.style.medium};
   `}
   line-height: 20px;
+  ${textStyle};
 `
 
 export const SmallText = styled.span`
   font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small)};
-  ${textStyle};
+  font-family: ${fonts.style.extraLight};
   ${props => props.bold && css`
     font-family: ${fonts.style.medium};
   `}
+  ${textStyle};
 `
 
 export const Label = styled.span`
   font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.label : fonts.size.label)};
+  font-family: ${fonts.style.extraLight};
   ${textStyle};
   ${props => props.bold && css`
     font-family: ${fonts.style.medium};

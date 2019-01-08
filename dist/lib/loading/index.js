@@ -20,27 +20,17 @@ var _styled = require('./styled');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
-==== PROPS ====
-
-text:         loading text
-large/small:  size
-vertical:
-
-================
-*/
-
 var Loading = function Loading(props) {
   return _react2.default.createElement(
     _styled.LoadingWrapper,
     props,
-    _react2.default.createElement(_icon2.default, { spin: true, icon: 'icon-reload' }),
+    _react2.default.createElement(_icon2.default, { spin: true, icon: 'fal fa-spinner-third' }),
     props.text ? props.text : 'loading'
   );
 };
 
 Loading.propTypes = {
-  test: _propTypes2.default.string,
+  text: _propTypes2.default.string,
   vertical: _propTypes2.default.bool,
   large: _propTypes2.default.bool,
   small: _propTypes2.default.bool

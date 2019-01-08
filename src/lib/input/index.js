@@ -6,24 +6,7 @@ import {
 	InputWrapper, InputWrapperElement, InputElement,
 	InputWithLabelWrapper, LabelWrapper,
 } from './styled'
-import { color, fonts, animate } from '../../styles/_variables'
-
-/*
-==== PROPS ====
-
-large/small:         		size
-margin:									margin of input
-padding:								padding of input
-rectangle:							set input border radius to 0
-color:									set color of input
-prefix/suffix:					send prefix/suffix set in input (only Icon)
-width:									set width of input
-state:									set state of input ( error / success / warning )
-ghost:									set background of input to transparent
-disabled:								set input to disabled
-
-================
-*/
+import { color } from '../../styles/_variables'
 
 export const Input = props => (
 	<InputWrapper width={props.width} large={props.large} small={props.small} margin={props.margin} padding={props.padding}>
@@ -53,19 +36,6 @@ Input.propTypes = {
 	small: bool,
 }
 
-/*
-==== PROPS ====
-
-position:         			set position of text ( top / left / right )
-width:									set width of input
-margin:									set margin of wrapper
-padding:								set padding of wrapper
-title:									object with color / icon / text to set title props
-input:									object with props of input
-
-================
-*/
-
 export const InputWithLabel = props => (
 	<InputWithLabelWrapper margin={props.margin} padding={props.padding} position={props.position}>
 		<LabelWrapper color={props.title.color}>
@@ -73,7 +43,7 @@ export const InputWithLabel = props => (
 				props.title.icon &&
 				<Icon margin='0 8px 0 0' icon={props.title.icon} />
 			}
-			<P>{props.title.text}</P>
+			<P bold={props.title.bold}>{props.title.text}</P>
 		</LabelWrapper>
 		<Input width={props.width && props.width} {...props.input} />
 	</InputWithLabelWrapper>
@@ -87,6 +57,7 @@ InputWithLabel.propTypes = {
 		text: string.isRequired,
 		icon: string,
 		color: string,
+		bold: bool,
 	}).isRequired,
 	input: object,
 }

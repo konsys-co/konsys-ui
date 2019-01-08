@@ -7,9 +7,9 @@ exports.InputWithLabelWrapper = exports.LabelWrapper = exports.InputWrapper = ex
 
 var _templateObject = _taggedTemplateLiteral(['\n\tdisplay: inline-block;\n\tposition: relative;\n\twidth: 100%;\n'], ['\n\tdisplay: inline-block;\n\tposition: relative;\n\twidth: 100%;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n\toutline: 0 !important;\n\tfont-family: ', ';\n\tfont-weight: normal;\n\tfont-size: ', ';\n\tline-height: 20px;\n\tcolor: ', ';\n\tborder: 1px solid ', ';\n\tborder-radius: ', ';\n\ttransition: ', ';\n\tpadding: 6px 8px;\n\tbox-sizing: border-box;\n\t&::placeholder {\n\t\tcolor: ', ';\n\t}\n\t&:focus,\n\t&:hover {\n\t\tborder: 1px solid ', ';\n\t\t~ ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n\t~ ', ' {\n\t\tcolor: ', ';\n\t\tfont-size: ', ';\n\t\ttransition: ', ';\n\t\tposition: absolute;\n\t\ttop: 30%;\n\t\t&.prefix {\n\t\t\tleft: 8px;\n\t\t}\n\t\t&.suffix {\n\t\t\tright: 8px;\n\t\t}\n\t}\n\t', '\n'], ['\n\toutline: 0 !important;\n\tfont-family: ', ';\n\tfont-weight: normal;\n\tfont-size: ', ';\n\tline-height: 20px;\n\tcolor: ', ';\n\tborder: 1px solid ', ';\n\tborder-radius: ', ';\n\ttransition: ', ';\n\tpadding: 6px 8px;\n\tbox-sizing: border-box;\n\t&::placeholder {\n\t\tcolor: ', ';\n\t}\n\t&:focus,\n\t&:hover {\n\t\tborder: 1px solid ', ';\n\t\t~ ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n\t~ ', ' {\n\t\tcolor: ', ';\n\t\tfont-size: ', ';\n\t\ttransition: ', ';\n\t\tposition: absolute;\n\t\ttop: 30%;\n\t\t&.prefix {\n\t\t\tleft: 8px;\n\t\t}\n\t\t&.suffix {\n\t\t\tright: 8px;\n\t\t}\n\t}\n\t', '\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t&:disabled {\n\t\t\tcursor: not-allowed;\n\t\t\tbackground-color: ', ';\n\t\t\tborder: 1px solid ', ';\n\t\t\tcolor: ', ';\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ';\n\t\t\t}\n\t\t}\n\t'], ['\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t&:disabled {\n\t\t\tcursor: not-allowed;\n\t\t\tbackground-color: ', ';\n\t\t\tborder: 1px solid ', ';\n\t\t\tcolor: ', ';\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ';\n\t\t\t}\n\t\t}\n\t']),
-    _templateObject4 = _taggedTemplateLiteral(['\n\t\t\tpadding-left: 30px;\n\t\t'], ['\n\t\t\tpadding-left: 30px;\n\t\t']),
-    _templateObject5 = _taggedTemplateLiteral(['\n\t\t\tpadding-right: 30px;\n\t\t'], ['\n\t\t\tpadding-right: 30px;\n\t\t']),
+    _templateObject3 = _taggedTemplateLiteral(['\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t&:disabled {\n\t\t\tcursor: not-allowed;\n\t\t\tbackground-color: ', ';\n\t\t\tborder: 1px solid ', ';\n\t\t\tcolor: ', ';\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ';\n\t\t\t}\n\t\t}\n\t'], ['\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t&:disabled {\n\t\t\tcursor: not-allowed;\n\t\t\tbackground-color: ', ';\n\t\t\tborder: 1px solid ', ';\n\t\t\tcolor: ', ';\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ';\n\t\t\t}\n\t\t}\n\t']),
+    _templateObject4 = _taggedTemplateLiteral(['\n\t\t\tpadding-left: 28px;\n\t\t'], ['\n\t\t\tpadding-left: 28px;\n\t\t']),
+    _templateObject5 = _taggedTemplateLiteral(['\n\t\t\tpadding-right: 28px;\n\t\t'], ['\n\t\t\tpadding-right: 28px;\n\t\t']),
     _templateObject6 = _taggedTemplateLiteral(['\n\t\t\tmin-width: ', ';\n\t\t\twidth: ', ';\n\t\t'], ['\n\t\t\tmin-width: ', ';\n\t\t\twidth: ', ';\n\t\t']),
     _templateObject7 = _taggedTemplateLiteral(['\n\t\t\tbackground-color: transparent;\n\t\t'], ['\n\t\t\tbackground-color: transparent;\n\t\t']),
     _templateObject8 = _taggedTemplateLiteral(['\n\t\t\tfont-size: ', ';\n\t\t\tpadding: 8px 16px;\n\t\t\t', '\n\t\t\t', '\n\t\t\t~ ', ' {\n\t\t\t\tfont-size: ', ';\n\t\t\t\t', '\n\t\t\t\ttop: 35%;\n\t\t\t}\n\t\t'], ['\n\t\t\tfont-size: ', ';\n\t\t\tpadding: 8px 16px;\n\t\t\t', '\n\t\t\t', '\n\t\t\t~ ', ' {\n\t\t\t\tfont-size: ', ';\n\t\t\t\t', '\n\t\t\t\ttop: 35%;\n\t\t\t}\n\t\t']),
@@ -23,11 +23,14 @@ var _templateObject = _taggedTemplateLiteral(['\n\tdisplay: inline-block;\n\tpos
     _templateObject16 = _taggedTemplateLiteral(['right: 6px'], ['right: 6px']),
     _templateObject17 = _taggedTemplateLiteral(['left: 6px'], ['left: 6px']),
     _templateObject18 = _taggedTemplateLiteral(['\n\t\t\tborder: 1px solid ', ' !important;\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ' !important;\n\t\t\t}\n\t\t'], ['\n\t\t\tborder: 1px solid ', ' !important;\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ' !important;\n\t\t\t}\n\t\t']),
-    _templateObject19 = _taggedTemplateLiteral(['\n\tdisplay: inline-block;\n\tmargin: ', ';\n\tpadding: ', ';\n\twidth: ', ';\n\t> ', ' {\n\t\tdisplay: block;\n\t\tword-break: break-all;\n\t\twidth: 100%;\n\t\tmargin: 8px 0 0;\n\t\ttext-align: right;\n\t}\n'], ['\n\tdisplay: inline-block;\n\tmargin: ', ';\n\tpadding: ', ';\n\twidth: ', ';\n\t> ', ' {\n\t\tdisplay: block;\n\t\tword-break: break-all;\n\t\twidth: 100%;\n\t\tmargin: 8px 0 0;\n\t\ttext-align: right;\n\t}\n']),
-    _templateObject20 = _taggedTemplateLiteral(['\n\t> * {\n\t\tcolor: ', ';\n\t}\n'], ['\n\t> * {\n\t\tcolor: ', ';\n\t}\n']),
-    _templateObject21 = _taggedTemplateLiteral(['\n\tdisplay: flex;\n\tflex-direction: ', ';\n\talign-items: ', ';\n\t> ', ' {\n\t\tdisplay: inline-flex;\n\t\talign-items: baseline;\n\t\tmargin: ', ';\n\t\twhite-space: nowrap;\n\t\torder: ', ';\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t}\n\t', '\n'], ['\n\tdisplay: flex;\n\tflex-direction: ', ';\n\talign-items: ', ';\n\t> ', ' {\n\t\tdisplay: inline-flex;\n\t\talign-items: baseline;\n\t\tmargin: ', ';\n\t\twhite-space: nowrap;\n\t\torder: ', ';\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t}\n\t', '\n']),
-    _templateObject22 = _taggedTemplateLiteral(['\n\t\t', '\n\t\t', '\n\t'], ['\n\t\t', '\n\t\t', '\n\t']),
-    _templateObject23 = _taggedTemplateLiteral(['\n\t\t\tmargin: ', ';\n\t\t'], ['\n\t\t\tmargin: ', ';\n\t\t']);
+    _templateObject19 = _taggedTemplateLiteral(['\n\t\t\tpadding: ', ';\n\t\t'], ['\n\t\t\tpadding: ', ';\n\t\t']),
+    _templateObject20 = _taggedTemplateLiteral(['\n\tdisplay: inline-block;\n\t', '\n\t> ', ' {\n\t\tdisplay: block;\n\t\tword-break: break-all;\n\t\twidth: 100%;\n\t\tmargin: 8px 0 0;\n\t\ttext-align: right;\n\t}\n'], ['\n\tdisplay: inline-block;\n\t', '\n\t> ', ' {\n\t\tdisplay: block;\n\t\tword-break: break-all;\n\t\twidth: 100%;\n\t\tmargin: 8px 0 0;\n\t\ttext-align: right;\n\t}\n']),
+    _templateObject21 = _taggedTemplateLiteral(['\n\t\t', '\n\t\t', '\n\t'], ['\n\t\t', '\n\t\t', '\n\t']),
+    _templateObject22 = _taggedTemplateLiteral(['margin: ', ';'], ['margin: ', ';']),
+    _templateObject23 = _taggedTemplateLiteral(['width: ', ';'], ['width: ', ';']),
+    _templateObject24 = _taggedTemplateLiteral(['\n\t> * {\n\t\tcolor: ', ';\n\t}\n'], ['\n\t> * {\n\t\tcolor: ', ';\n\t}\n']),
+    _templateObject25 = _taggedTemplateLiteral(['\n\tdisplay: flex;\n\tflex-direction: ', ';\n\talign-items: ', ';\n\t> ', ' {\n\t\tdisplay: inline-flex;\n\t\talign-items: baseline;\n\t\tmargin: ', ';\n\t\twhite-space: nowrap;\n\t\torder: ', ';\n\t\tfont-family: ', ';\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t}\n\t', '\n'], ['\n\tdisplay: flex;\n\tflex-direction: ', ';\n\talign-items: ', ';\n\t> ', ' {\n\t\tdisplay: inline-flex;\n\t\talign-items: baseline;\n\t\tmargin: ', ';\n\t\twhite-space: nowrap;\n\t\torder: ', ';\n\t\tfont-family: ', ';\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t}\n\t', '\n']),
+    _templateObject26 = _taggedTemplateLiteral(['\n\t\t\tmargin: ', ';\n\t\t'], ['\n\t\t\tmargin: ', ';\n\t\t']);
 
 var _styledComponents = require('styled-components');
 
@@ -70,29 +73,27 @@ var InputElement = exports.InputElement = _styledComponents2.default.input(_temp
 		return props.theme.fonts ? props.theme.fonts.size.label : _variables.fonts.size.label;
 	}, function (props) {
 		return props.suffix ? (0, _styledComponents.css)(_templateObject16) : (0, _styledComponents.css)(_templateObject17);
-	}), props.state && (0, _styledComponents.css)(_templateObject18, props.state === 'error' ? _variables.theme.color.error : props.state === 'success' ? _variables.theme.color.success : props.state === 'warning' && _variables.theme.color.warning, _styled2.default, props.state === 'error' ? _variables.theme.color.error : props.state === 'success' ? _variables.theme.color.success : props.state === 'warning' && _variables.theme.color.warning), _variables.color.light, _variables.color.paleGray, _variables.color.lightGray, _styled2.default, _variables.color.paleGray);
+	}), props.state && (0, _styledComponents.css)(_templateObject18, props.state === 'error' ? _variables.theme.color.error : props.state === 'success' ? _variables.theme.color.success : props.state === 'warning' && _variables.theme.color.warning, _styled2.default, props.state === 'error' ? _variables.theme.color.error : props.state === 'success' ? _variables.theme.color.success : props.state === 'warning' && _variables.theme.color.warning), props.padding && (0, _styledComponents.css)(_templateObject19, props.padding), _variables.color.light, _variables.color.paleGray, _variables.color.lightGray, _styled2.default, _variables.color.paleGray);
 });
 
-var InputWrapper = exports.InputWrapper = _styledComponents2.default.div(_templateObject19, function (props) {
-	return props.margin ? props.margin : 0;
-}, function (props) {
-	return props.padding ? props.padding : 0;
-}, function (props) {
-	return props.width ? props.width : props.large ? defaultLargeMinWidth : props.small ? defaultSmallMinWidth : defaultMinWidth;
+var InputWrapper = exports.InputWrapper = _styledComponents2.default.div(_templateObject20, function (props) {
+	return (0, _styledComponents.css)(_templateObject21, props.margin && (0, _styledComponents.css)(_templateObject22, props.margin), props.width && (0, _styledComponents.css)(_templateObject23, props.width));
 }, _text.Label);
 
-var LabelWrapper = exports.LabelWrapper = _styledComponents2.default.span(_templateObject20, _variables.theme.color.textColor);
+var LabelWrapper = exports.LabelWrapper = _styledComponents2.default.span(_templateObject24, _variables.theme.color.textColor);
 
-var InputWithLabelWrapper = exports.InputWithLabelWrapper = _styledComponents2.default.div(_templateObject21, function (props) {
+var InputWithLabelWrapper = exports.InputWithLabelWrapper = _styledComponents2.default.div(_templateObject25, function (props) {
 	return props.position === 'left' || props.position === 'right' ? 'row' : 'column';
 }, function (props) {
 	return props.position === 'left' || props.position === 'right' ? 'center' : 'left';
 }, LabelWrapper, function (props) {
-	return props.position === 'left' ? '0 16px 0 0' : props.position === 'right' ? '0 0 0 8px' : '0 0 8px';
+	return props.position === 'left' ? '0 24px 0 0' : props.position === 'right' ? '0 0 0 24px' : '0 0 16px';
 }, function (props) {
 	return props.position === 'right' ? 1 : 0;
+}, function (props) {
+	return props.theme.fonts ? props.theme.fonts.style.extraLight : _variables.fonts.style.extraLight;
 }, _styled2.default, function (props) {
 	return props.theme.fonts ? props.theme.fonts.size.small : _variables.fonts.size.small;
 }, function (props) {
-	return (0, _styledComponents.css)(_templateObject22, props.margin && (0, _styledComponents.css)(_templateObject23, props.margin), props.padding && (0, _styledComponents.css)(_templateObject23, props.padding));
+	return (0, _styledComponents.css)(_templateObject21, props.margin && (0, _styledComponents.css)(_templateObject26, props.margin), props.padding && (0, _styledComponents.css)(_templateObject26, props.padding));
 });

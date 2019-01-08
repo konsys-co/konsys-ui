@@ -21,20 +21,6 @@ var _styled = require('./styled');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
-==== PROPS ====
-
-id:           set id of radio/checkbox input
-name:         set name of radio/checkbox input
-margin:       set margin of radio/checkbox wrapper
-disabled:     disable radio/checkbox
-data:         data of radio/checkbox value
-  - value:    radio/checkbox value
-  - text:     redio/checkbox text
-  - icon:     icon in front of radio/checkbox text
-
-*/
-
 var Radio = exports.Radio = function Radio(props) {
   return _react2.default.createElement(
     _styled.Wrapper,
@@ -74,17 +60,6 @@ var Checkbox = exports.Checkbox = function Checkbox(props) {
   );
 };
 Checkbox.propTypes = _propTypes2.PROP_SELECT;
-
-/*
-==== PROPS ====
-
-id:           set id of radio/checkbox input
-name:         set name of radio/checkbox input
-margin:       set margin of radio/checkbox wrapper
-list:         array of Data [value, text, icon]
-vertical:     change default, horizontal, to vertical
-
-*/
 
 var RadioGroup = exports.RadioGroup = function RadioGroup(props) {
   return _react2.default.createElement(

@@ -19,35 +19,7 @@ var _icon2 = _interopRequireDefault(_icon);
 
 var _styled = require('./styled');
 
-var _variables = require('./../../styles/_variables');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/*
-==== PROPS ====
-
----- about button ----
-inverse:      inverse to background color and set font color to white
-fullWidth:    expand button width to 100%
-large/small:  size
-buttonStyle:  set style of button ( round / rectangle )
-  round:      border full round button
-  rectangle:  no border radius
-ghost:        in normal mode ghost props will set background to trasparent
-color:        color to use as a text and border in normal mode and as a background and border in inverse mode
---------------------
-
----- about icon ----
-icon:         icon to place in button
-rightIcon:    place icon right to text
-onlyIcon:     show only icon in button
-spinIcon:     set icon to spin
---------------------
-
-text:         text in button
-
-================
-*/
 
 var Button = function Button(props) {
   return _react2.default.createElement(
@@ -86,8 +58,5 @@ Button.propTypes = {
 };
 
 var ButtonTest = exports.ButtonTest = (0, _styledComponents.withTheme)(Button);
-// ButtonTest.defaultProps = {
-//   theme: theme
-// }
 
 exports.default = Button;

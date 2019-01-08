@@ -10,13 +10,11 @@ import { Input, InputWithLabel } from './lib/input'
 class Document extends React.Component {
   render() {
     return (
-      <ThemeProvider theme={{ color: { primaryColor: 'purple' }}}>
-        <div>
-          <h3>ks-common-component document page</h3>
-          <ButtonTest icon='icon-arrow-right' rightIcon margin='24px' text='test' />
-          <Button icon='icon-refresh' onlyIcon spinIcon />
-        </div>
-      </ThemeProvider>
+      <div>
+        <h3>ks-common-component document page</h3>
+        <ButtonTest icon='icon-arrow-right' rightIcon margin='24px' text='test' />
+        <Button icon='icon-refresh' onlyIcon spinIcon />
+      </div>
     )
   }
 }
@@ -25,6 +23,5 @@ export {
   Button, Icon, Loading, Radio, Checkbox, RadioGroup, CheckboxGroup,
   H1, H2, H3, H4, P, SmallText, Label,
   Input, InputWithLabel,
-  ButtonTest,
 }
 export default Document;
