@@ -57,6 +57,7 @@ export const animate = {
   `,
   time: {
     loading: '1s',
+    maxHeight: '0.5s',
   },
   transition: 'all 0.5s ease',
 }
@@ -64,6 +65,7 @@ export const animate = {
 const textColor = props => (props.color ? props.color : props.theme.color ? props.theme.color.dark : color.dark)
 
 const primaryColor = props => (props.theme.color ? props.theme.color.primaryColor : color.primaryColor)
+const primaryColorRGB = props => (props.theme.color ? props.theme.color.primaryColorRGB : color.primaryColorRGB)
 const secondaryColor = props => (props.theme.color ? props.theme.color.secondaryColor : color.secondaryColor)
 const tertiaryColor = props => (props.theme.color ? props.theme.color.tertiaryColor : color.tertiaryColor)
 
@@ -80,12 +82,21 @@ const errorColor = props => (props.theme.color ? props.theme.color.error : color
 const successColor = props => (props.theme.color ? props.theme.color.success : color.success);
 const warningColor = props => (props.theme.color ? props.theme.color.warning : color.warning);
 
+const animateTheme = props => (props.theme ? props.theme.animate : animate);
+
 export const theme = {
   color: {
     primaryColor: primaryColor,
+    primaryColorRGB: primaryColorRGB,
+    secondaryColor: secondaryColor,
+    tertiaryColor: tertiaryColor,
     textColor: textColor,
     success: successColor,
     error: errorColor,
     warning: warningColor,
-  }
+    paleGray: paleGray,
+  },
+  shadow: {
+    selectShadow: '0 0 20px',
+  },
 }

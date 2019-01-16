@@ -1,99 +1,48 @@
 import styled, { css } from 'styled-components'
-import { P } from '../text'
-import { color, fonts } from '../../styles/_variables'
-import { IconStyled } from '../icon/styled'
+import { IconStyled } from './../icon/styled'
+import { color, theme, animate } from './../../styles/_variables' 
 
-export const SelectInput = styled.input`
-  display: none;
+export const SelectListWrapper = styled.ul`
+	margin: 8px 0 0;
+	border-radius: 4px;
+	background-color: ${color.offWhite};
+	transition: max-height ${animate.time.maxHeight} ease;
+	&.hide {
+		max-height: 0;
+	}
+	&.show {
+		height: auto;
+		padding: ${props => (props.padding ? props.padding : '8px')};
+		box-shadow: ${theme.shadow.selectShadow} rgba(${theme.color.primaryColorRGB}, 0.15)};
+		max-height: ${props => (props.maxHeight ? props.maxHeight : '190px')};
+		overflow: scroll;
+  }
 `
 
-export const Label = styled.label`
-  display: flex;
+export const SelectChoiceWrapper = styled.li`
+	margin: 0;
+	padding: 8px 16px;
+	border-radius: 4px;
+	list-style-type: none;
+	cursor: pointer;
+	display: flex;
   align-items: center;
-`
-
-export const RadioInputLabel = styled.span`
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  position: relative;
-  border: 1px solid ${color.paleGray};
-  border-radius: 50%;
-  cursor: pointer;
-  &::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: ${props => (props.color ? props.color : props.theme.color ? props.theme.color.secondaryColor : color.secondaryColor)};
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-  }
-`
-
-export const CheckboxLabel = styled(RadioInputLabel)`
-  border-radius: 2px;
-  &::before {
-    content: "\f00c";
-    font-family: 'fontAwesome';
-    width: auto;
-    height: auto;
-    background: none;
-    font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small)};
-    color: ${props => (props.color ? props.color : props.theme.color ? props.theme.color.secondaryColor : color.secondaryColor)};
-  }
-`
-
-export const Text = styled(P)`
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 0 0 8px;
-  > ${IconStyled} {
-    font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.label : fonts.size.label)} !important;
-    margin-right: 8px;
-  }
-`
-
-export const Wrapper = styled.div`
-  display: inline-block;
-  ${props => props.margin && css`
-    margin: ${props.margin};
-  `}
-  > ${SelectInput} {
-    &:checked + ${Label} > ${CheckboxLabel}::before,
-    &:checked + ${Label} > ${RadioInputLabel}::before {
-      opacity: 1;
+  ${props => props.color && css`
+    color: ${props.color};
+    > ${IconStyled} {
+      color: ${props.color};
     }
-    &:disabled + ${Label},
-    &:disabled + ${Label} {
-      ${Text} {
-        cursor: not-allowed;
-        color: ${color.lightGray};
-        > ${IconStyled} {
-          color: ${color.lightGray};
-        }
-      }
-      > ${CheckboxLabel},
-      > ${RadioInputLabel} {
-        cursor: not-allowed;
-        background-color: ${color.light};
-      }
-    }
-  }
+  `}
+	&:hover {
+    color: ${color.offWhite};
+		background-color: ${theme.color.primaryColor};
+		> ${IconStyled} {
+			color: ${color.offWhite};
+		}
+	}
 `
 
-export const WrapperGroup = styled.div`
-  display: inline-flex;
-  ${props => props.margin && css`
-    margin: ${props.margin};
-  `}
-  ${props => props.vertical && css`
-    flex-direction: column;
-  `}
+export const CenterText = styled.div`
+	padding: 16px;
+	text-align: center;
 `
-
-export default SelectInput

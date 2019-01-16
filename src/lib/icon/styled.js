@@ -13,6 +13,9 @@ export const IconStyled = styled.i`
     ? css`${props.theme.animate.spin} ${props.theme.animate.time.loading} linear infinite !important`
     : css`${animate.spin} ${animate.time.loading} linear infinite !important`};
     `}
+    ${props.fontSize && css`
+      font-size: ${props.fontSize};
+    `}
   `}
 `
 

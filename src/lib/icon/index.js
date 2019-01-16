@@ -15,6 +15,7 @@ Icon.propTypes = {
   color: PropTypes.string,
   icon: PropTypes.string.isRequired,
   spin: PropTypes.bool,
+  fontSize: PropTypes.string,
 }
 
 export default Icon

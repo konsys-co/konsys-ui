@@ -13,6 +13,10 @@ const Loading = props => (
   </LoadingWrapper>
 )
 
+export const LoadingIcon = props => (
+  <Icon {...props} spin icon='fal fa-spinner-third' />
+)
+
 Loading.propTypes = {
   text: PropTypes.string,
   vertical: PropTypes.bool,

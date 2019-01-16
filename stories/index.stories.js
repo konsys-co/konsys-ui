@@ -14,8 +14,8 @@ import { Welcome } from '@storybook/react/demo';
 import {
   Button, Input, InputWithLabel, Icon,
   Radio, RadioGroup, Checkbox, CheckboxGroup,
-  H1, H2, H3, H4, P, SmallText, Label,
-  Loading,
+  H1, H2, H3, H4, P, SmallText, Label, TextLink,
+  Loading, LoadingIcon, Select, Collapse,
 } from '../src/'
 
 addDecorator(withNotes);
@@ -104,16 +104,21 @@ storiesOf('Text', module)
     <P font='Sarabun'>P - คอนซิส คอมปานี</P>
   </DisplayCode>)
 
+/* */
+storiesOf('Link', module)
+  .add('text link', () => <DisplayCode title='text link' code={`<TextLink href=''>werqwerqwe</TextLink>`}>
+    <TextLink href=''>werqwerqwe</TextLink>
+  </DisplayCode>)
 
 /* ======================== ICON ======================== */
 storiesOf('Icon', module)
-  .add('with icon class', () => <DisplayCode title='with icon classn' code={`<Icon icon='fal fa-bug' />`}>
+  .add('with icon class', () => <DisplayCode title='with icon class' code={`<Icon icon='fal fa-bug' />`}>
     <Icon icon='fal fa-bug' />
   </DisplayCode>)
-  .add('with custom color', () => <DisplayCode title='with icon classn' code={`<Icon icon='fal fa-bug' color={coralColor} />`}>
+  .add('with custom color', () => <DisplayCode title='with icon class' code={`<Icon icon='fal fa-bug' color={coralColor} />`}>
     <Icon icon='fal fa-bug' color={coralColor} />
   </DisplayCode>)
-  .add('with spin icon', () => <DisplayCode title='with icon classn' code={`<Icon spin icon='fal fa-bug' color={coralColor} />`}>
+  .add('with spin icon', () => <DisplayCode title='with icon class' code={`<Icon spin icon='fal fa-bug' color={coralColor} />`}>
     <Icon spin icon='fal fa-bug' color={coralColor} />
   </DisplayCode>)
 
@@ -368,6 +373,162 @@ storiesOf('Checkbox Group', module)
     ]} />
   </DisplayCode>)
 
+/* ======================== Select ======================== */
+storiesOf('Select', module)
+  .add('with items', () => <DisplayCode title='send props data' code={`<Select
+    data={[
+      {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
+      {value: 'pear', text: 'แพร์'},
+      {value: 'orange', text: 'ส้ม'},
+      {value: 'grape', text: 'องุ่น'},
+      {value: 'banana', text: 'กล้วย'},
+    ]}
+  />`}>
+    <Select
+      data={[
+        {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
+        {value: 'pear', text: 'แพร์'},
+        {value: 'orange', text: 'ส้ม'},
+        {value: 'grape', text: 'องุ่น'},
+        {value: 'banana', text: 'กล้วย'},
+      ]}
+    />
+  </DisplayCode>)
+  .add('with collapse items', () => <DisplayCode title='send props tree and data' code={`<Select
+    tree
+    data={[
+      {
+        parentTitle: 'หัวข้อรายละเอียด 1',
+        parentColor: '#F2A840',
+        items: [
+          {value: 'apple', text: 'แอปเปิ้ล1', icon: 'fas fa-apple-alt'},
+          {value: 'pear', text: 'แพร์1'},
+        ],
+      }, {
+        parentTitle: 'หัวข้อรายละเอียด 2',
+        items: [
+          {value: 'orange', text: 'ส้ม2'},
+          {value: 'grape', text: 'องุ่น2'},
+        ],
+      }, {
+        parentTitle: 'หัวข้อรายละเอียด 3',
+        items: [
+          {value: 'banana', text: 'กล้วย3'},
+        ],
+      },
+    ]}
+  />`}>
+    <Select
+      tree
+      data={[
+        {
+          parentTitle: 'หัวข้อรายละเอียด 1',
+          parentColor: '#F2A840',
+          items: [
+            {value: 'apple', text: 'แอปเปิ้ล1', icon: 'fas fa-apple-alt'},
+            {value: 'pear', text: 'แพร์1'},
+          ],
+        }, {
+          parentTitle: 'หัวข้อรายละเอียด 2',
+          items: [
+            {value: 'orange', text: 'ส้ม2'},
+            {value: 'grape', text: 'องุ่น2'},
+          ],
+        }, {
+          parentTitle: 'หัวข้อรายละเอียด 3',
+          items: [
+            {value: 'banana', text: 'กล้วย3'},
+          ],
+        },
+      ]}
+    />
+  </DisplayCode>)
+  .add('with color', () => <DisplayCode title='with color to set color of dropdown text' code={`<Select
+    color={coralColor}
+    data={[
+      {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
+      {value: 'pear', text: 'แพร์'},
+      {value: 'orange', text: 'ส้ม'},
+      {value: 'grape', text: 'องุ่น'},
+      {value: 'banana', text: 'กล้วย'},
+    ]}
+  />`}>
+    <Select
+      color={coralColor}
+      data={[
+        {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
+        {value: 'pear', text: 'แพร์'},
+        {value: 'orange', text: 'ส้ม'},
+        {value: 'grape', text: 'องุ่น'},
+        {value: 'banana', text: 'กล้วย'},
+      ]}
+    />
+  </DisplayCode>)
+  .add('with maxHeight', () => <DisplayCode title='with maxHeight to set height of dropdown' code={`<Select
+    maxHeight="80px"
+    data={[
+      {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
+      {value: 'pear', text: 'แพร์'},
+      {value: 'orange', text: 'ส้ม'},
+      {value: 'grape', text: 'องุ่น'},
+      {value: 'banana', text: 'กล้วย'},
+    ]}
+  />`}>
+    <Select
+      maxHeight='80px'
+      data={[
+        {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
+        {value: 'pear', text: 'แพร์'},
+        {value: 'orange', text: 'ส้ม'},
+        {value: 'grape', text: 'องุ่น'},
+        {value: 'banana', text: 'กล้วย'},
+      ]}
+    />
+  </DisplayCode>)
+  .add('with inputProps', () => <DisplayCode title='with inputProps to set props of input' code={`<Select
+    inputProps={{
+      color: coralColor,
+      large: true,
+    }}
+    data={[
+      {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
+      {value: 'pear', text: 'แพร์'},
+      {value: 'orange', text: 'ส้ม'},
+      {value: 'grape', text: 'องุ่น'},
+      {value: 'banana', text: 'กล้วย'},
+    ]}
+  />`}>
+    <Select
+      inputProps={{
+        color: coralColor
+      }}
+      data={[
+        {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
+        {value: 'pear', text: 'แพร์'},
+        {value: 'orange', text: 'ส้ม'},
+        {value: 'grape', text: 'องุ่น'},
+        {value: 'banana', text: 'กล้วย'},
+      ]}
+    />
+  </DisplayCode>)
+
+/* ======================== Collapse ======================== */
+storiesOf('Collapse', module)
+  .add('with required title and children', () => <DisplayCode title='with required title and children' code={`<Loading />`}>
+    <Collapse title='หัวข้อรายละเอียด'>
+      <P>โนติสเบนโลอัลบัมรามเทพ ศิรินทร์สตรอเบอรีโพลารอยด์ คัตเอาต์ดีกรีติ่มซำ แพตเทิร์นอัลบัม เบนโตะลอร์ดไทม์กระดี๊กระด๊ามาราธอน หลวงปู่เซี้ยวตื้บ โหงว คัตเอาต์ยะเยือกโปลิศสามแยก</P>
+    </Collapse>
+  </DisplayCode>)
+  .add('with required title and children and color', () => <DisplayCode title='with required title and children data' code={`<Loading />`}>
+    <Collapse title='หัวข้อรายละเอียด' color={coralColor}>
+      <P>โนติสเบนโลอัลบัมรามเทพ ศิรินทร์สตรอเบอรีโพลารอยด์ คัตเอาต์ดีกรีติ่มซำ แพตเทิร์นอัลบัม เบนโตะลอร์ดไทม์กระดี๊กระด๊ามาราธอน หลวงปู่เซี้ยวตื้บ โหงว คัตเอาต์ยะเยือกโปลิศสามแยก</P>
+    </Collapse>
+  </DisplayCode>)
+  .add('with required title and children and bold', () => <DisplayCode title='with required title and children bold' code={`<Loading />`}>
+    <Collapse title='หัวข้อรายละเอียด' bold>
+      <P>โนติสเบนโลอัลบัมรามเทพ ศิรินทร์สตรอเบอรีโพลารอยด์ คัตเอาต์ดีกรีติ่มซำ แพตเทิร์นอัลบัม เบนโตะลอร์ดไทม์กระดี๊กระด๊ามาราธอน หลวงปู่เซี้ยวตื้บ โหงว คัตเอาต์ยะเยือกโปลิศสามแยก</P>
+    </Collapse>
+  </DisplayCode>)
 
 /* ======================== Loading ======================== */
 storiesOf('Loading', module)
@@ -383,6 +544,10 @@ storiesOf('Loading', module)
     <Loading large text='Loading your profile ...' /><br/><br/>
     <Loading small text='Loading your profile ...' />
   </DisplayCode>)
-  .add('with vertical position', () => <DisplayCode title='with size' code={`<Loading large vertical text='Loading your profile ...' />`}>
+  .add('with vertical position', () => <DisplayCode title='with vertical position' code={`<Loading large vertical text='Loading your profile ...' />`}>
     <Loading large vertical text='Loading your profile ...' />
   </DisplayCode>)
+  .add('only load icon', () => <DisplayCode title='only load icon' code={`<LoadingIcon color={coralColor} />`}>
+    <LoadingIcon color={coralColor} />
+  </DisplayCode>)
+

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { color, fonts } from '../../styles/_variables'
+import { color, fonts, animate } from '../../styles/_variables'
 
 export const textStyle = css`
   font-weight: normal;
@@ -67,4 +67,15 @@ export const Label = styled.span`
   ${props => props.bold && css`
     font-family: ${fonts.style.medium};
   `}
+`
+
+export const TextLink = styled.a`
+  color: ${props => (props.theme.color ? props.theme.color.secondaryColor : color.secondaryColor)};
+  transition: ${animate.transition};
+  &:hover {
+    color: ${props => (props.theme.color ? `${props.theme.color.secondaryColor}CC` : `${color.secondaryColor}CC`)};
+  }
+  &:visited {
+    color: ${props => (props.theme.color ? `${props.theme.color.secondaryColor}88` : `${color.secondaryColor}88`)};
+  }
 `

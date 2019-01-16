@@ -9,7 +9,7 @@ const selectData = shape({
   icon: string,
 })
 
-export const PROP_SELECT = {
+export const PROP_CHOICE = {
   id: string,
   name: string,
   margin: string,
@@ -17,7 +17,7 @@ export const PROP_SELECT = {
   data: selectData,
 }
 
-export const PROP_SELECT_GROUP = {
+export const PROP_CHOICE_GROUP = {
   id: string,
   name: string,
   margin: string,
