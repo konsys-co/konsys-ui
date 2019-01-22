@@ -6,6 +6,7 @@ export const textStyle = css`
   color: ${props => (props.color ? props.color : color.dark)};
   margin: ${props => (props.margin ? props.margin : 0)};
   padding: ${props => (props.padding ? props.padding : 0)};
+  display: ${props => (props.display ? props.display : 'inline-block')};
   ${props => props.font && css`
     font-family: ${props.font};
   `}

@@ -19,14 +19,14 @@ export const TitleWrapper = styled.div`
   `}
 `
 export const ContentWrapper = styled.div`
+  margin-left: 22px;
   max-height: 0;
   overflow: hidden;
-  transition: ${animate.transition};
-  margin-left: 22px;
+  transition: max-height ${animate.time.maxHeight} ease;
   &.show {
-    max-height: 250px;
-    overflow: scroll;
     margin-top: 8px;
+    max-height: ${props => (props.maxHeight ? props.maxHeight : '1000px')};
+    overflow: scroll;
   }
 `
 

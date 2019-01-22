@@ -59,7 +59,8 @@ var fonts = exports.fonts = {
 var animate = exports.animate = {
   spin: (0, _styledComponents.keyframes)(_templateObject),
   time: {
-    loading: '1s'
+    loading: '1s',
+    maxHeight: '0.5s'
   },
   transition: 'all 0.5s ease'
 };
@@ -70,6 +71,9 @@ var textColor = function textColor(props) {
 
 var primaryColor = function primaryColor(props) {
   return props.theme.color ? props.theme.color.primaryColor : color.primaryColor;
+};
+var primaryColorRGB = function primaryColorRGB(props) {
+  return props.theme.color ? props.theme.color.primaryColorRGB : color.primaryColorRGB;
 };
 var secondaryColor = function secondaryColor(props) {
   return props.theme.color ? props.theme.color.secondaryColor : color.secondaryColor;
@@ -113,12 +117,23 @@ var warningColor = function warningColor(props) {
   return props.theme.color ? props.theme.color.warning : color.warning;
 };
 
+var animateTheme = function animateTheme(props) {
+  return props.theme ? props.theme.animate : animate;
+};
+
 var theme = exports.theme = {
   color: {
     primaryColor: primaryColor,
+    primaryColorRGB: primaryColorRGB,
+    secondaryColor: secondaryColor,
+    tertiaryColor: tertiaryColor,
     textColor: textColor,
     success: successColor,
     error: errorColor,
-    warning: warningColor
+    warning: warningColor,
+    paleGray: paleGray
+  },
+  shadow: {
+    selectShadow: '0 0 20px'
   }
 };

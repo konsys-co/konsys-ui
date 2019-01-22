@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ButtonTest = undefined;
 
 var _react = require('react');
 
@@ -25,7 +24,7 @@ var Button = function Button(props) {
   return _react2.default.createElement(
     _styled.Btn,
     props,
-    console.log(props),
+    console.log('theme: ', props),
     props.onlyIcon ? _react2.default.createElement(_icon2.default, { key: 'button-icon', spin: props.spinIcon, icon: props.icon }) : props.icon ? props.rightIcon ? [_react2.default.createElement(
       'span',
       { key: 'button-text' },
@@ -57,6 +56,4 @@ Button.propTypes = {
   spinIcon: _propTypes.bool
 };
 
-var ButtonTest = exports.ButtonTest = (0, _styledComponents.withTheme)(Button);
-
-exports.default = Button;
+exports.default = (0, _styledComponents.withTheme)(Button);

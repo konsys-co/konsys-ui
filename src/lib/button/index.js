@@ -1,6 +1,7 @@
 import React from 'react'
-import { string, bool, oneOf } from 'prop-types'
+import { string, bool, oneOf, object } from 'prop-types'
 import { withTheme } from 'styled-components'
+import { theme } from './../../styles/_variables'
 import Icon from '../icon'
 import {
   Btn,
@@ -10,9 +11,6 @@ const Button = props => (
   <Btn
     {...props}
   >
-  {
-    console.log(props)
-  }
   {
     props.onlyIcon
       ? <Icon key='button-icon' spin={props.spinIcon} icon={props.icon} />
@@ -45,7 +43,8 @@ Button.propTypes = {
   onlyIcon: bool,
   spinIcon: bool,
 }
+Button.defaultProps = {
+  theme: theme,
+}
 
-export const ButtonTest = withTheme(Button)
-
-export default Button
+export default withTheme(Button)

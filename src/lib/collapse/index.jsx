@@ -23,15 +23,15 @@ class Collapse extends PureComponent {
   render() {
     const { show } = this.state
     const {
-      children, title, color, bold,
+      children, title, color, bold, maxHeight,
     } = this.props
     return (
       <CollapseWrapper>
-        <TitleWrapper rotateIcon={show}>
+        <TitleWrapper rotateIcon={show} onClick={() => this.setState({ show: !show })}>
           <Icon color={color ? color : theme.color.primaryColor} margin='0 16px 0 0' icon="fas fa-caret-right" />
-          <P color={color ? color : theme.color.primaryColor} bold={bold} onClick={() => this.setState({ show: !show })}>{title}</P>
+          <P color={color ? color : theme.color.primaryColor} bold={bold}>{title}</P>
         </TitleWrapper>
-        <ContentWrapper className={show && 'show'}>
+        <ContentWrapper maxHeight={maxHeight} className={show ? 'show' : 'hide'}>
           {children}
         </ContentWrapper>
       </CollapseWrapper>
@@ -41,6 +41,7 @@ class Collapse extends PureComponent {
 Collapse.propTypes = {
   title: string.isRequired,
   color: string,
+  maxHeight: string,
   bold: boolean,
 }
 

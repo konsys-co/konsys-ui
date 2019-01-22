@@ -27,7 +27,8 @@ var Icon = function Icon(props) {
 Icon.propTypes = {
   color: _propTypes2.default.string,
   icon: _propTypes2.default.string.isRequired,
-  spin: _propTypes2.default.bool
+  spin: _propTypes2.default.bool,
+  fontSize: _propTypes2.default.string
 };
 
 exports.default = Icon;

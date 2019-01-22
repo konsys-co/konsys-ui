@@ -3,6 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.LoadingIcon = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = require('react');
 
@@ -27,6 +30,10 @@ var Loading = function Loading(props) {
     _react2.default.createElement(_icon2.default, { spin: true, icon: 'fal fa-spinner-third' }),
     props.text ? props.text : 'loading'
   );
+};
+
+var LoadingIcon = exports.LoadingIcon = function LoadingIcon(props) {
+  return _react2.default.createElement(_icon2.default, _extends({}, props, { spin: true, icon: 'fal fa-spinner-third' }));
 };
 
 Loading.propTypes = {

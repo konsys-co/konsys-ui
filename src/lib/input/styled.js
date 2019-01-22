@@ -25,6 +25,7 @@ export const InputElement = styled.input`
 	transition: ${props => (props.theme.animate ? props.theme.animate.transition : animate.transition)};
 	padding: 6px 8px;
 	box-sizing: border-box;
+	width: 100%;
 	&::placeholder {
 		color: ${color.paleGray};
 	}
@@ -54,10 +55,6 @@ export const InputElement = styled.input`
 		`}
 		${props.suffix && css`
 			padding-right: 28px;
-		`}
-		${props.width && css`
-			min-width: ${props.width};
-			width: ${props.width};
 		`}
 		${props.ghost && css`
 			background-color: transparent;

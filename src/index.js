@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import Button, { ButtonTest } from './lib/button'
+import Button from './lib/button'
 import Icon from './lib/icon'
 import Loading, { LoadingIcon } from './lib/loading'
 import { Radio, Checkbox, RadioGroup, CheckboxGroup } from './lib/choice'

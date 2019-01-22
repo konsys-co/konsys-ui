@@ -5,6 +5,7 @@ import {
   RadioInputLabel, Label, SelectInput, Text, Wrapper,
   WrapperGroup, CheckboxLabel,
 } from './styled'
+import { theme } from './../../styles/_variables'
 
 export const Radio = props => (
   <Wrapper {...props}>
@@ -16,6 +17,9 @@ export const Radio = props => (
   </Wrapper>
 )
 Radio.propTypes = PROP_CHOICE
+Radio.defaultProps = {
+  theme: theme,
+}
 
 export const Checkbox = props => (
   <Wrapper {...props}>
@@ -27,6 +31,9 @@ export const Checkbox = props => (
   </Wrapper>
 )
 Checkbox.propTypes = PROP_CHOICE
+Checkbox.defaultProps = {
+  theme: theme,
+}
 
 export const RadioGroup = props => (
   <WrapperGroup {...props}>
@@ -36,6 +43,9 @@ export const RadioGroup = props => (
   </WrapperGroup>
 )
 RadioGroup.propTypes = PROP_CHOICE_GROUP
+RadioGroup.defaultProps = {
+  theme: theme,
+}
 
 export const CheckboxGroup = props => (
   <WrapperGroup {...props}>
@@ -45,5 +55,8 @@ export const CheckboxGroup = props => (
   </WrapperGroup>
 )
 CheckboxGroup.propTypes = PROP_CHOICE_GROUP
+CheckboxGroup.defaultProps = {
+  theme: theme,
+}
 
 export default Radio

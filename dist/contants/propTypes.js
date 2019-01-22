@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.PROP_SELECT_GROUP = exports.PROP_SELECT = undefined;
+exports.PROP_CHOICE_GROUP = exports.PROP_CHOICE = undefined;
 
 var _propTypes = require('prop-types');
 
@@ -13,7 +13,7 @@ var selectData = (0, _propTypes.shape)({
   icon: _propTypes.string
 });
 
-var PROP_SELECT = exports.PROP_SELECT = {
+var PROP_CHOICE = exports.PROP_CHOICE = {
   id: _propTypes.string,
   name: _propTypes.string,
   margin: _propTypes.string,
@@ -21,7 +21,7 @@ var PROP_SELECT = exports.PROP_SELECT = {
   data: selectData
 };
 
-var PROP_SELECT_GROUP = exports.PROP_SELECT_GROUP = {
+var PROP_CHOICE_GROUP = exports.PROP_CHOICE_GROUP = {
   id: _propTypes.string,
   name: _propTypes.string,
   margin: _propTypes.string,

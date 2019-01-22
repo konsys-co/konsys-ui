@@ -35,13 +35,13 @@ export const fonts = {
     semiBold: 'kanit-semiBold',
   },
   size: {
-    heading: '3.5em',
-    subHeading: '2.5em',
-    title: '1.875em',
-    subTitle: '1.375em',
-    normal: '1em',
-    small: '0.875em',
-    label: '0.75em',
+    heading: '56px',
+    subHeading: '40px',
+    title: '30px',
+    subTitle: '22px',
+    normal: '16px',
+    small: '14px',
+    label: '12px',
   },
 }
 
@@ -61,6 +61,8 @@ export const animate = {
   },
   transition: 'all 0.5s ease',
 }
+
+/* ------------- COLOR ------------- */
 
 const textColor = props => (props.color ? props.color : props.theme.color ? props.theme.color.dark : color.dark)
 
@@ -84,6 +86,29 @@ const warningColor = props => (props.theme.color ? props.theme.color.warning : c
 
 const animateTheme = props => (props.theme ? props.theme.animate : animate);
 
+/* ------------- FONT ------------- */
+
+const fontExtraLight = props => (props.theme.fonts ? props.theme.fonts.style.extraLight : fonts.size.extraLight);
+const fontLight = props => (props.theme.fonts ? props.theme.fonts.style.light : fonts.size.light);
+const fontRegular = props => (props.theme.fonts ? props.theme.fonts.style.regular : fonts.size.regular);
+const fontMedium = props => (props.theme.fonts ? props.theme.fonts.style.medium : fonts.size.medium);
+const fontSemiBold = props => (props.theme.fonts ? props.theme.fonts.style.semiBold : fonts.size.semiBold);
+
+const fontLabel = props => (props.theme.fonts ? props.theme.fonts.size.label : fonts.size.label);
+const fontSmall = props => (props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small);
+const fontNormal = props => (props.theme.fonts ? props.theme.fonts.size.normal : fonts.size.normal);
+const fontSubTitle = props => (props.theme.fonts ? props.theme.fonts.size.subTitle : fonts.size.subTitle);
+const fonttitle = props => (props.theme.fonts ? props.theme.fonts.size.title : fonts.size.title);
+const fontSubHeading = props => (props.theme.fonts ? props.theme.fonts.size.subHeading : fonts.size.subHeading);
+const fontHeading = props => (props.theme.fonts ? props.theme.fonts.size.heading : fonts.size.heading);
+
+/* ------------- ANIMATE ------------- */
+
+const animateSpin = props => (props.theme.animate ? props.theme.animate.spin : animate.spin);
+const animateTimeLoading = props => (props.theme.animate.time ? props.theme.animate.time.loading : animate.time.loading);
+const animateTimeMaxHeight = props => (props.theme.animate.time ? props.theme.animate.time.maxHeight : animate.time.maxHeight);
+const animateTransition = props => (props.theme.animate ? props.theme.animate.transition : animate.time.transition);
+
 export const theme = {
   color: {
     primaryColor: primaryColor,
@@ -99,4 +124,91 @@ export const theme = {
   shadow: {
     selectShadow: '0 0 20px',
   },
+  fonts: {
+    style: {
+      extraLight: fontExtraLight,
+      light: fontLight,
+      regular: fontRegular,
+      medium: fontMedium,
+      semiBold: fontSemiBold,
+    },
+    size: {
+      heading: fontHeading,
+      subHeading: fontSubHeading,
+      title: fonttitle,
+      subTitle: fontSubTitle,
+      normal: fontNormal,
+      small: fontSmall,
+      label: fontLabel,
+    },
+  },
+  animate: {
+    spin: animateSpin,
+    time: {
+      loading: animateTimeLoading,
+      maxHeight: animateTimeMaxHeight,
+    },
+    transition: animateTransition,
+  },
 }
+
+// export const theme = {
+//   color: {
+//     primaryColor: '#0932CF',
+//     primaryColorRGB: '17, 58, 203',
+//     secondaryColor: '#30458F',
+//     tertiaryColor: '#76B0CE',
+
+//     /* --- Gray Scale --- */
+//     offWhite: '#FFFFFF',
+//     light: '#F2F2F2',
+//     paleGray: '#C0BFC1',
+//     lightGray: '#929497',
+//     gray: '#5A595B',
+//     darkGray: '#49484A',
+//     dark: '#14131B',
+
+//     /* --- Info Color --- */
+//     info: '#25B7C9',
+//     success: '#53A857',
+//     error: '#E54343',
+//     warning: '#F99028',
+//   },
+//   fonts: {
+//     style: {
+//       extraLight: 'kanit-extraLight',
+//       light: 'kanit-light',
+//       regular: 'kanit-regular',
+//       medium: 'kanit-medium',
+//       semiBold: 'kanit-semiBold',
+//     },
+//     size: {
+//       heading: '3.5em',
+//       subHeading: '2.5em',
+//       title: '1.875em',
+//       subTitle: '1.375em',
+//       normal: '1em',
+//       small: '0.875em',
+//       label: '0.75em',
+//     },
+//   },
+//   animate: {
+//     spin: keyframes`
+//       from {
+//         transform: rotate(0deg);
+//       }
+  
+//       to {
+//         transform: rotate(360deg);
+//       }
+//     `,
+//     time: {
+//       loading: '1s',
+//       maxHeight: '0.5s',
+//     },
+//     transition: 'all 0.5s ease',
+//   },
+//   shadow: {
+//     selectShadow: '0 0 20px',
+//   },
+// }

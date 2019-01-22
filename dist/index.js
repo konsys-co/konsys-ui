@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.InputWithLabel = exports.Input = exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.CheckboxGroup = exports.RadioGroup = exports.Checkbox = exports.Radio = exports.Loading = exports.Icon = exports.Button = undefined;
+exports.Collapse = exports.Select = exports.TextLink = exports.InputWithLabel = exports.Input = exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.CheckboxGroup = exports.RadioGroup = exports.Checkbox = exports.Radio = exports.LoadingIcon = exports.Loading = exports.Icon = exports.Button = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -25,11 +25,19 @@ var _loading = require('./lib/loading');
 
 var _loading2 = _interopRequireDefault(_loading);
 
-var _select = require('./lib/select');
+var _choice = require('./lib/choice');
 
 var _text = require('./lib/text');
 
 var _input = require('./lib/input');
+
+var _select = require('./lib/select');
+
+var _select2 = _interopRequireDefault(_select);
+
+var _collapse = require('./lib/collapse');
+
+var _collapse2 = _interopRequireDefault(_collapse);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -59,7 +67,7 @@ var Document = function (_React$Component) {
           null,
           'ks-common-component document page'
         ),
-        _react2.default.createElement(_button.ButtonTest, { icon: 'icon-arrow-right', rightIcon: true, margin: '24px', text: 'test' }),
+        _react2.default.createElement(ButtonTest, { icon: 'icon-arrow-right', rightIcon: true, margin: '24px', text: 'test' }),
         _react2.default.createElement(_button2.default, { icon: 'icon-refresh', onlyIcon: true, spinIcon: true })
       );
     }
@@ -71,10 +79,11 @@ var Document = function (_React$Component) {
 exports.Button = _button2.default;
 exports.Icon = _icon2.default;
 exports.Loading = _loading2.default;
-exports.Radio = _select.Radio;
-exports.Checkbox = _select.Checkbox;
-exports.RadioGroup = _select.RadioGroup;
-exports.CheckboxGroup = _select.CheckboxGroup;
+exports.LoadingIcon = _loading.LoadingIcon;
+exports.Radio = _choice.Radio;
+exports.Checkbox = _choice.Checkbox;
+exports.RadioGroup = _choice.RadioGroup;
+exports.CheckboxGroup = _choice.CheckboxGroup;
 exports.H1 = _text.H1;
 exports.H2 = _text.H2;
 exports.H3 = _text.H3;
@@ -84,4 +93,7 @@ exports.SmallText = _text.SmallText;
 exports.Label = _text.Label;
 exports.Input = _input.Input;
 exports.InputWithLabel = _input.InputWithLabel;
+exports.TextLink = _text.TextLink;
+exports.Select = _select2.default;
+exports.Collapse = _collapse2.default;
 exports.default = Document;

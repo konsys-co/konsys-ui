@@ -3,14 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.textStyle = undefined;
+exports.TextLink = exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.textStyle = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n  font-weight: normal;\n  color: ', ';\n  margin: ', ';\n  padding: ', ';\n  ', '\n'], ['\n  font-weight: normal;\n  color: ', ';\n  margin: ', ';\n  padding: ', ';\n  ', '\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    font-family: ', ';\n  '], ['\n    font-family: ', ';\n  ']),
     _templateObject3 = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-family: ', ';\n  ', ';\n'], ['\n  font-size: ', ';\n  font-family: ', ';\n  ', ';\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-family: ', ';\n  ', '\n  ', ';\n'], ['\n  font-size: ', ';\n  font-family: ', ';\n  ', '\n  ', ';\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-family: ', ';\n  ', '\n  line-height: 20px;\n  ', ';\n'], ['\n  font-size: ', ';\n  font-family: ', ';\n  ', '\n  line-height: 20px;\n  ', ';\n']),
-    _templateObject6 = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-family: ', ';\n  ', ';\n  ', '\n'], ['\n  font-size: ', ';\n  font-family: ', ';\n  ', ';\n  ', '\n']);
+    _templateObject6 = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-family: ', ';\n  ', ';\n  ', '\n'], ['\n  font-size: ', ';\n  font-family: ', ';\n  ', ';\n  ', '\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n  color: ', ';\n  transition: ', ';\n  &:hover {\n    color: ', ';\n  }\n  &:visited {\n    color: ', ';\n  }\n'], ['\n  color: ', ';\n  transition: ', ';\n  &:hover {\n    color: ', ';\n  }\n  &:visited {\n    color: ', ';\n  }\n']);
 
 var _styledComponents = require('styled-components');
 
@@ -68,4 +69,12 @@ var Label = exports.Label = _styledComponents2.default.span(_templateObject6, fu
   return props.theme.fonts ? props.theme.fonts.size.label : _variables.fonts.size.label;
 }, _variables.fonts.style.extraLight, textStyle, function (props) {
   return props.bold && (0, _styledComponents.css)(_templateObject2, _variables.fonts.style.medium);
+});
+
+var TextLink = exports.TextLink = _styledComponents2.default.a(_templateObject7, function (props) {
+  return props.theme.color ? props.theme.color.secondaryColor : _variables.color.secondaryColor;
+}, _variables.animate.transition, function (props) {
+  return props.theme.color ? props.theme.color.secondaryColor + 'CC' : _variables.color.secondaryColor + 'CC';
+}, function (props) {
+  return props.theme.color ? props.theme.color.secondaryColor + '88' : _variables.color.secondaryColor + '88';
 });

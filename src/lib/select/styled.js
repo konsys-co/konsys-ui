@@ -2,11 +2,15 @@ import styled, { css } from 'styled-components'
 import { IconStyled } from './../icon/styled'
 import { color, theme, animate } from './../../styles/_variables' 
 
+
 export const SelectListWrapper = styled.ul`
 	margin: 8px 0 0;
 	border-radius: 4px;
 	background-color: ${color.offWhite};
 	transition: max-height ${animate.time.maxHeight} ease;
+  position: absolute;
+  left: 0;
+  right: 0;
 	&.hide {
 		max-height: 0;
 	}
@@ -17,6 +21,16 @@ export const SelectListWrapper = styled.ul`
 		max-height: ${props => (props.maxHeight ? props.maxHeight : '190px')};
 		overflow: scroll;
   }
+`
+
+export const SelectWrapper = styled.div`
+  position: relative;
+  width: ${props => (props.width && props.width)};
+  ${props => props.collapse && css`
+    > ${SelectListWrapper} {
+      position: relative;
+    }
+  `}
 `
 
 export const SelectChoiceWrapper = styled.li`
