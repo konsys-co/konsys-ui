@@ -3,12 +3,14 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.CenterText = exports.SelectChoiceWrapper = exports.SelectListWrapper = undefined;
+exports.CenterText = exports.SelectChoiceWrapper = exports.SelectWrapper = exports.SelectListWrapper = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\tmargin: 8px 0 0;\n\tborder-radius: 4px;\n\tbackground-color: ', ';\n\ttransition: max-height ', ' ease;\n\t&.hide {\n\t\tmax-height: 0;\n\t}\n\t&.show {\n\t\theight: auto;\n\t\tpadding: ', ';\n\t\tbox-shadow: ', ' rgba(', ', 0.15)};\n\t\tmax-height: ', ';\n\t\toverflow: scroll;\n  }\n'], ['\n\tmargin: 8px 0 0;\n\tborder-radius: 4px;\n\tbackground-color: ', ';\n\ttransition: max-height ', ' ease;\n\t&.hide {\n\t\tmax-height: 0;\n\t}\n\t&.show {\n\t\theight: auto;\n\t\tpadding: ', ';\n\t\tbox-shadow: ', ' rgba(', ', 0.15)};\n\t\tmax-height: ', ';\n\t\toverflow: scroll;\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n\tmargin: 0;\n\tpadding: 8px 16px;\n\tborder-radius: 4px;\n\tlist-style-type: none;\n\tcursor: pointer;\n\tdisplay: flex;\n  align-items: center;\n  ', '\n\t&:hover {\n    color: ', ';\n\t\tbackground-color: ', ';\n\t\t> ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n'], ['\n\tmargin: 0;\n\tpadding: 8px 16px;\n\tborder-radius: 4px;\n\tlist-style-type: none;\n\tcursor: pointer;\n\tdisplay: flex;\n  align-items: center;\n  ', '\n\t&:hover {\n    color: ', ';\n\t\tbackground-color: ', ';\n\t\t> ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n    color: ', ';\n    > ', ' {\n      color: ', ';\n    }\n  '], ['\n    color: ', ';\n    > ', ' {\n      color: ', ';\n    }\n  ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n\tpadding: 16px;\n\ttext-align: center;\n'], ['\n\tpadding: 16px;\n\ttext-align: center;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n\tmargin: 8px 0 0;\n\tborder-radius: 4px;\n\tbackground-color: ', ';\n\ttransition: max-height ', ' ease;\n  position: absolute;\n  left: 0;\n  right: 0;\n\t&.hide {\n\t\tmax-height: 0;\n\t}\n\t&.show {\n\t\theight: auto;\n\t\tpadding: ', ';\n\t\tbox-shadow: ', ' rgba(', ', 0.15)};\n\t\tmax-height: ', ';\n\t\toverflow: scroll;\n  }\n'], ['\n\tmargin: 8px 0 0;\n\tborder-radius: 4px;\n\tbackground-color: ', ';\n\ttransition: max-height ', ' ease;\n  position: absolute;\n  left: 0;\n  right: 0;\n\t&.hide {\n\t\tmax-height: 0;\n\t}\n\t&.show {\n\t\theight: auto;\n\t\tpadding: ', ';\n\t\tbox-shadow: ', ' rgba(', ', 0.15)};\n\t\tmax-height: ', ';\n\t\toverflow: scroll;\n  }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  position: relative;\n  width: ', ';\n  ', '\n'], ['\n  position: relative;\n  width: ', ';\n  ', '\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    > ', ' {\n      position: relative;\n    }\n  '], ['\n    > ', ' {\n      position: relative;\n    }\n  ']),
+    _templateObject4 = _taggedTemplateLiteral(['\n\tmargin: 0;\n\tpadding: 8px 16px;\n\tborder-radius: 4px;\n\tlist-style-type: none;\n\tcursor: pointer;\n\tdisplay: flex;\n  align-items: center;\n  ', '\n\t&:hover {\n    color: ', ';\n\t\tbackground-color: ', ';\n\t\t> ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n'], ['\n\tmargin: 0;\n\tpadding: 8px 16px;\n\tborder-radius: 4px;\n\tlist-style-type: none;\n\tcursor: pointer;\n\tdisplay: flex;\n  align-items: center;\n  ', '\n\t&:hover {\n    color: ', ';\n\t\tbackground-color: ', ';\n\t\t> ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n    color: ', ';\n    > ', ' {\n      color: ', ';\n    }\n  '], ['\n    color: ', ';\n    > ', ' {\n      color: ', ';\n    }\n  ']),
+    _templateObject6 = _taggedTemplateLiteral(['\n\tpadding: 16px;\n\ttext-align: center;\n'], ['\n\tpadding: 16px;\n\ttext-align: center;\n']);
 
 var _styledComponents = require('styled-components');
 
@@ -28,8 +30,14 @@ var SelectListWrapper = exports.SelectListWrapper = _styledComponents2.default.u
 	return props.maxHeight ? props.maxHeight : '190px';
 });
 
-var SelectChoiceWrapper = exports.SelectChoiceWrapper = _styledComponents2.default.li(_templateObject2, function (props) {
-	return props.color && (0, _styledComponents.css)(_templateObject3, props.color, _styled.IconStyled, props.color);
+var SelectWrapper = exports.SelectWrapper = _styledComponents2.default.div(_templateObject2, function (props) {
+	return props.width && props.width;
+}, function (props) {
+	return props.collapse && (0, _styledComponents.css)(_templateObject3, SelectListWrapper);
+});
+
+var SelectChoiceWrapper = exports.SelectChoiceWrapper = _styledComponents2.default.li(_templateObject4, function (props) {
+	return props.color && (0, _styledComponents.css)(_templateObject5, props.color, _styled.IconStyled, props.color);
 }, _variables.color.offWhite, _variables.theme.color.primaryColor, _styled.IconStyled, _variables.color.offWhite);
 
-var CenterText = exports.CenterText = _styledComponents2.default.div(_templateObject4);
+var CenterText = exports.CenterText = _styledComponents2.default.div(_templateObject6);

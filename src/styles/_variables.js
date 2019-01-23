@@ -28,11 +28,11 @@ export const color = {
 
 export const fonts = {
   style: {
-    extraLight: 'kanit-extraLight',
-    light: 'kanit-light',
-    regular: 'kanit-regular',
-    medium: 'kanit-medium',
-    semiBold: 'kanit-semiBold',
+    extraLight: '200',
+    light: '300',
+    regular: '400',
+    medium: '500',
+    semiBold: '600',
   },
   size: {
     heading: '56px',
@@ -102,6 +102,8 @@ const fonttitle = props => (props.theme.fonts ? props.theme.fonts.size.title : f
 const fontSubHeading = props => (props.theme.fonts ? props.theme.fonts.size.subHeading : fonts.size.subHeading);
 const fontHeading = props => (props.theme.fonts ? props.theme.fonts.size.heading : fonts.size.heading);
 
+const fontFamilyNormal = props => (props.theme.fonts ? props.theme.fonts.family.normal : 'kanit');
+
 /* ------------- ANIMATE ------------- */
 
 const animateSpin = props => (props.theme.animate ? props.theme.animate.spin : animate.spin);
@@ -125,6 +127,9 @@ export const theme = {
     selectShadow: '0 0 20px',
   },
   fonts: {
+    family: {
+      normal: fontFamilyNormal,
+    },
     style: {
       extraLight: fontExtraLight,
       light: fontLight,

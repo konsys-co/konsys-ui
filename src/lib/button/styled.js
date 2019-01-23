@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { IconStyled } from '../icon/styled'
-import { color, fonts, animate } from '../../styles/_variables'
+import { P } from '../text'
+import { color, fonts, animate, theme } from '../../styles/_variables'
 
 const buttonMainColor = props => (props.color ? props.color : props.theme.color ? props.theme.color.primaryColor : color.primaryColor)
 const buttonHoverColor = props => (props.color ? `${props.color}CC` : props.theme.color ? `${props.theme.color.primaryColor}CC` : `${color.primaryColor}CC`)
@@ -26,9 +27,15 @@ export const Btn = styled.button`
     margin: ${props => (props.rightIcon ? '0 0 0 8px' : '0 8px 0 0')};
     color: ${buttonMainColor};
   }
+  > ${P} {
+    color: ${buttonMainColor};
+  }
   &:hover {
     border: 1px solid ${buttonHoverColor};
     color: ${buttonHoverColor};
+    > ${P} {
+      color: ${buttonHoverColor};
+    }
   }
   &:disabled {
     cursor: not-allowed;
@@ -49,12 +56,17 @@ export const Btn = styled.button`
     border: 1px solid ${buttonMainColor};
     background-color: ${buttonMainColor};
     color: ${color.offWhite};
+    > ${P},
     > ${IconStyled} {
       color: ${color.offWhite};
     }
     &:hover {
       background-color: ${buttonHoverColor};
       color: ${color.offWhite};
+      > ${IconStyled},
+      > ${P} {
+        color: ${color.offWhite};
+      }
     }
   `}
   ${props => props.fullWidth && css`

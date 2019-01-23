@@ -17,6 +17,8 @@ var _icon2 = _interopRequireDefault(_icon);
 
 var _styled = require('./styled');
 
+var _variables = require('./../../styles/_variables');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Radio = exports.Radio = function Radio(props) {
@@ -38,6 +40,9 @@ var Radio = exports.Radio = function Radio(props) {
   );
 };
 Radio.propTypes = _propTypes.PROP_CHOICE;
+Radio.defaultProps = {
+  theme: _variables.theme
+};
 
 var Checkbox = exports.Checkbox = function Checkbox(props) {
   return _react2.default.createElement(
@@ -58,6 +63,9 @@ var Checkbox = exports.Checkbox = function Checkbox(props) {
   );
 };
 Checkbox.propTypes = _propTypes.PROP_CHOICE;
+Checkbox.defaultProps = {
+  theme: _variables.theme
+};
 
 var RadioGroup = exports.RadioGroup = function RadioGroup(props) {
   return _react2.default.createElement(
@@ -69,6 +77,9 @@ var RadioGroup = exports.RadioGroup = function RadioGroup(props) {
   );
 };
 RadioGroup.propTypes = _propTypes.PROP_CHOICE_GROUP;
+RadioGroup.defaultProps = {
+  theme: _variables.theme
+};
 
 var CheckboxGroup = exports.CheckboxGroup = function CheckboxGroup(props) {
   return _react2.default.createElement(
@@ -80,5 +91,8 @@ var CheckboxGroup = exports.CheckboxGroup = function CheckboxGroup(props) {
   );
 };
 CheckboxGroup.propTypes = _propTypes.PROP_CHOICE_GROUP;
+CheckboxGroup.defaultProps = {
+  theme: _variables.theme
+};
 
 exports.default = Radio;

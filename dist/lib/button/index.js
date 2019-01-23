@@ -12,6 +12,8 @@ var _propTypes = require('prop-types');
 
 var _styledComponents = require('styled-components');
 
+var _variables = require('./../../styles/_variables');
+
 var _icon = require('../icon');
 
 var _icon2 = _interopRequireDefault(_icon);
@@ -24,7 +26,6 @@ var Button = function Button(props) {
   return _react2.default.createElement(
     _styled.Btn,
     props,
-    console.log('theme: ', props),
     props.onlyIcon ? _react2.default.createElement(_icon2.default, { key: 'button-icon', spin: props.spinIcon, icon: props.icon }) : props.icon ? props.rightIcon ? [_react2.default.createElement(
       'span',
       { key: 'button-text' },

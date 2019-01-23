@@ -15,8 +15,7 @@ export const InputWrapperElement = styled.div`
 
 export const InputElement = styled.input`
 	outline: 0 !important;
-	font-family: ${fonts.style.extraLight};
-	font-weight: normal;
+	font-weight: ${theme.fonts.style.extraLight};
 	font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.normal : fonts.size.normal)};
 	line-height: 20px;
 	color: ${theme.color.textColor};
@@ -27,6 +26,8 @@ export const InputElement = styled.input`
 	box-sizing: border-box;
 	width: 100%;
 	&::placeholder {
+		font-family: ${theme.fonts.family.normal};
+		font-weight: ${theme.fonts.style.extraLight};
 		color: ${color.paleGray};
 	}
 	&:focus,

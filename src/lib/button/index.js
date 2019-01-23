@@ -3,14 +3,13 @@ import { string, bool, oneOf, object } from 'prop-types'
 import { withTheme } from 'styled-components'
 import { theme } from './../../styles/_variables'
 import Icon from '../icon'
+import { P } from '../text'
 import {
   Btn,
 } from './styled'
 
 const Button = props => (
-  <Btn
-    {...props}
-  >
+  <Btn {...props}>
   {
     props.onlyIcon
       ? <Icon key='button-icon' spin={props.spinIcon} icon={props.icon} />
@@ -24,7 +23,7 @@ const Button = props => (
             <Icon key='button-icon' spin={props.spinIcon} icon={props.icon} />,
             <span key='button-text'>{ props.text ? props.text : 'Button text here' }</span>,
           ]
-        : <span key='button-text'>{ props.text ? props.text : 'Button text here' }</span>
+        : <P key='button-text'>{ props.text ? props.text : 'Button text here เทส' }</P>
   }
   </Btn>
 )
@@ -42,9 +41,6 @@ Button.propTypes = {
   rightIcon: bool,
   onlyIcon: bool,
   spinIcon: bool,
-}
-Button.defaultProps = {
-  theme: theme,
 }
 
 export default withTheme(Button)

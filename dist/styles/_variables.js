@@ -39,20 +39,20 @@ var color = exports.color = {
 
 var fonts = exports.fonts = {
   style: {
-    extraLight: 'kanit-extraLight',
-    light: 'kanit-light',
-    regular: 'kanit-regular',
-    medium: 'kanit-medium',
-    semiBold: 'kanit-semiBold'
+    extraLight: '200',
+    light: '300',
+    regular: '400',
+    medium: '500',
+    semiBold: '600'
   },
   size: {
-    heading: '3.5em',
-    subHeading: '2.5em',
-    title: '1.875em',
-    subTitle: '1.375em',
-    normal: '1em',
-    small: '0.875em',
-    label: '0.75em'
+    heading: '56px',
+    subHeading: '40px',
+    title: '30px',
+    subTitle: '22px',
+    normal: '16px',
+    small: '14px',
+    label: '12px'
   }
 };
 
@@ -63,9 +63,10 @@ var animate = exports.animate = {
     maxHeight: '0.5s'
   },
   transition: 'all 0.5s ease'
-};
 
-var textColor = function textColor(props) {
+  /* ------------- COLOR ------------- */
+
+};var textColor = function textColor(props) {
   return props.color ? props.color : props.theme.color ? props.theme.color.dark : color.dark;
 };
 
@@ -121,6 +122,61 @@ var animateTheme = function animateTheme(props) {
   return props.theme ? props.theme.animate : animate;
 };
 
+/* ------------- FONT ------------- */
+
+var fontExtraLight = function fontExtraLight(props) {
+  return props.theme.fonts ? props.theme.fonts.style.extraLight : fonts.size.extraLight;
+};
+var fontLight = function fontLight(props) {
+  return props.theme.fonts ? props.theme.fonts.style.light : fonts.size.light;
+};
+var fontRegular = function fontRegular(props) {
+  return props.theme.fonts ? props.theme.fonts.style.regular : fonts.size.regular;
+};
+var fontMedium = function fontMedium(props) {
+  return props.theme.fonts ? props.theme.fonts.style.medium : fonts.size.medium;
+};
+var fontSemiBold = function fontSemiBold(props) {
+  return props.theme.fonts ? props.theme.fonts.style.semiBold : fonts.size.semiBold;
+};
+
+var fontLabel = function fontLabel(props) {
+  return props.theme.fonts ? props.theme.fonts.size.label : fonts.size.label;
+};
+var fontSmall = function fontSmall(props) {
+  return props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small;
+};
+var fontNormal = function fontNormal(props) {
+  return props.theme.fonts ? props.theme.fonts.size.normal : fonts.size.normal;
+};
+var fontSubTitle = function fontSubTitle(props) {
+  return props.theme.fonts ? props.theme.fonts.size.subTitle : fonts.size.subTitle;
+};
+var fonttitle = function fonttitle(props) {
+  return props.theme.fonts ? props.theme.fonts.size.title : fonts.size.title;
+};
+var fontSubHeading = function fontSubHeading(props) {
+  return props.theme.fonts ? props.theme.fonts.size.subHeading : fonts.size.subHeading;
+};
+var fontHeading = function fontHeading(props) {
+  return props.theme.fonts ? props.theme.fonts.size.heading : fonts.size.heading;
+};
+
+/* ------------- ANIMATE ------------- */
+
+var animateSpin = function animateSpin(props) {
+  return props.theme.animate ? props.theme.animate.spin : animate.spin;
+};
+var animateTimeLoading = function animateTimeLoading(props) {
+  return props.theme.animate.time ? props.theme.animate.time.loading : animate.time.loading;
+};
+var animateTimeMaxHeight = function animateTimeMaxHeight(props) {
+  return props.theme.animate.time ? props.theme.animate.time.maxHeight : animate.time.maxHeight;
+};
+var animateTransition = function animateTransition(props) {
+  return props.theme.animate ? props.theme.animate.transition : animate.time.transition;
+};
+
 var theme = exports.theme = {
   color: {
     primaryColor: primaryColor,
@@ -135,5 +191,93 @@ var theme = exports.theme = {
   },
   shadow: {
     selectShadow: '0 0 20px'
+  },
+  fonts: {
+    style: {
+      extraLight: fontExtraLight,
+      light: fontLight,
+      regular: fontRegular,
+      medium: fontMedium,
+      semiBold: fontSemiBold
+    },
+    size: {
+      heading: fontHeading,
+      subHeading: fontSubHeading,
+      title: fonttitle,
+      subTitle: fontSubTitle,
+      normal: fontNormal,
+      small: fontSmall,
+      label: fontLabel
+    }
+  },
+  animate: {
+    spin: animateSpin,
+    time: {
+      loading: animateTimeLoading,
+      maxHeight: animateTimeMaxHeight
+    },
+    transition: animateTransition
   }
+
+  // export const theme = {
+  //   color: {
+  //     primaryColor: '#0932CF',
+  //     primaryColorRGB: '17, 58, 203',
+  //     secondaryColor: '#30458F',
+  //     tertiaryColor: '#76B0CE',
+
+  //     /* --- Gray Scale --- */
+  //     offWhite: '#FFFFFF',
+  //     light: '#F2F2F2',
+  //     paleGray: '#C0BFC1',
+  //     lightGray: '#929497',
+  //     gray: '#5A595B',
+  //     darkGray: '#49484A',
+  //     dark: '#14131B',
+
+  //     /* --- Info Color --- */
+  //     info: '#25B7C9',
+  //     success: '#53A857',
+  //     error: '#E54343',
+  //     warning: '#F99028',
+  //   },
+  //   fonts: {
+  //     style: {
+  //       extraLight: 'kanit-extraLight',
+  //       light: 'kanit-light',
+  //       regular: 'kanit-regular',
+  //       medium: 'kanit-medium',
+  //       semiBold: 'kanit-semiBold',
+  //     },
+  //     size: {
+  //       heading: '3.5em',
+  //       subHeading: '2.5em',
+  //       title: '1.875em',
+  //       subTitle: '1.375em',
+  //       normal: '1em',
+  //       small: '0.875em',
+  //       label: '0.75em',
+  //     },
+  //   },
+  //   animate: {
+  //     spin: keyframes`
+  //       from {
+  //         transform: rotate(0deg);
+  //       }
+
+  //       to {
+  //         transform: rotate(360deg);
+  //       }
+  //     `,
+  //     time: {
+  //       loading: '1s',
+  //       maxHeight: '0.5s',
+  //     },
+  //     transition: 'all 0.5s ease',
+  //   },
+  //   shadow: {
+  //     selectShadow: '0 0 20px',
+  //   },
+  // }
+
 };
