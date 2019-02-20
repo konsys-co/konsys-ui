@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.TextLink = exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.textStyle = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n  font-weight: normal;\n  color: ', ';\n  margin: ', ';\n  padding: ', ';\n  display: ', ';\n  font-family: \'kanit\';\n  ', '\n'], ['\n  font-weight: normal;\n  color: ', ';\n  margin: ', ';\n  padding: ', ';\n  display: ', ';\n  font-family: \'kanit\';\n  ', '\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  color: ', ';\n  margin: ', ';\n  padding: ', ';\n  display: ', ';\n  font-family: \'kanit\';\n  ', '\n'], ['\n  color: ', ';\n  margin: ', ';\n  padding: ', ';\n  display: ', ';\n  font-family: \'kanit\';\n  ', '\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    font-family: ', ';\n  '], ['\n    font-family: ', ';\n  ']),
     _templateObject3 = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-weight: ', ';\n  ', ';\n'], ['\n  font-size: ', ';\n  font-weight: ', ';\n  ', ';\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  font-size: ', ';\n  font-weight: ', ';\n  ', '\n  ', ';\n'], ['\n  font-size: ', ';\n  font-weight: ', ';\n  ', '\n  ', ';\n']),

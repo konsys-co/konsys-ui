@@ -112,10 +112,12 @@ export const InputElement = styled.input`
 `
 
 export const InputWrapper = styled.div`
-	display: inline-block;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: ${props => props.width ? props.width : defaultMinWidth};
 	${props => css`
 		${props.margin && css`margin: ${props.margin};`}
-		${props.width && css`width: ${props.width};`}
 	`}
 	> ${Label} {
 		display: block;
@@ -133,9 +135,10 @@ export const LabelWrapper = styled.span`
 `
 
 export const InputWithLabelWrapper = styled.div`
-	display: flex;
+	display: inline-flex;
 	flex-direction: ${props => ((props.position === 'left' || props.position === 'right') ? 'row' : 'column')};
 	align-items: ${props => ((props.position === 'left' || props.position === 'right') ? 'center' : 'left')};
+	width: ${props => props.width || 'auto'};
 	> ${LabelWrapper} {
 		display: inline-flex;
 		align-items: baseline;
@@ -156,3 +159,19 @@ export const InputWithLabelWrapper = styled.div`
 		`}
 	`}
 `
+
+export const MessageWrapper = styled.div`
+	text-align: right;
+	margin: 8px 0 0;
+	${props => props.large && css`
+		> ${Label} {
+			font-size: ${props.theme.fonts ? props.theme.fonts.size.normal : fonts.size.normal};
+		}
+	`}
+	${props => props.small && css`
+		> ${Label} {
+			font-size: ${props.theme.fonts ? props.theme.fonts.size.label : fonts.size.label};
+		}
+	`}
+`
+

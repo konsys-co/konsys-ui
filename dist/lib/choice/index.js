@@ -48,7 +48,7 @@ var Checkbox = exports.Checkbox = function Checkbox(props) {
   return _react2.default.createElement(
     _styled.Wrapper,
     props,
-    _react2.default.createElement(_styled.SelectInput, { disabled: props.disabled, value: props.data.value, type: 'checkbox', id: props.id ? props.id : props.data.value ? props.data.value : 'checkbox', name: props.name ? props.name : 'checkbox' }),
+    _react2.default.createElement(_styled.SelectInput, { checked: props.checked, disabled: props.disabled, value: props.data.value, type: 'checkbox', id: props.id ? props.id : props.data.value ? props.data.value : 'checkbox', name: props.name ? props.name : 'checkbox' }),
     _react2.default.createElement(
       _styled.Label,
       { htmlFor: props.id ? props.id : props.data.value ? props.data.value : 'checkbox' },

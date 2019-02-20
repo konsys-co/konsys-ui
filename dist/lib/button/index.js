@@ -10,13 +10,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _propTypes = require('prop-types');
 
-var _styledComponents = require('styled-components');
-
 var _variables = require('./../../styles/_variables');
 
 var _icon = require('../icon');
 
 var _icon2 = _interopRequireDefault(_icon);
+
+var _text = require('../text');
 
 var _styled = require('./styled');
 
@@ -35,9 +35,9 @@ var Button = function Button(props) {
       { key: 'button-text' },
       props.text ? props.text : 'Button text here'
     )] : _react2.default.createElement(
-      'span',
+      _text.P,
       { key: 'button-text' },
-      props.text ? props.text : 'Button text here'
+      props.text ? props.text : 'Button text here เทส'
     )
   );
 };
@@ -57,4 +57,4 @@ Button.propTypes = {
   spinIcon: _propTypes.bool
 };
 
-exports.default = (0, _styledComponents.withTheme)(Button);
+exports.default = Button;

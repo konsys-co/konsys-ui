@@ -37,9 +37,13 @@ var Input = exports.Input = function Input(props) {
 			props.suffix
 		),
 		props.message && _react2.default.createElement(
-			_text.Label,
-			{ color: props.error ? _variables.color.error : props.success ? _variables.color.success : props.warning ? _variables.color.warning : _variables.color.lightGray },
-			props.message
+			_styled.MessageWrapper,
+			{ large: props.large, small: props.small },
+			_react2.default.createElement(
+				_text.Label,
+				{ color: props.state === 'error' ? _variables.theme.color.error : props.state === 'success' ? _variables.theme.color.success : props.state === 'warning' ? _variables.theme.color.warning : _variables.theme.color.lightGray },
+				props.message
+			)
 		)
 	);
 };
@@ -56,13 +60,14 @@ Input.propTypes = {
 	ghost: _propTypes.bool,
 	disabled: _propTypes.bool,
 	large: _propTypes.bool,
-	small: _propTypes.bool
+	small: _propTypes.bool,
+	message: _propTypes.string
 };
 
 var InputWithLabel = exports.InputWithLabel = function InputWithLabel(props) {
 	return _react2.default.createElement(
 		_styled.InputWithLabelWrapper,
-		{ margin: props.margin, padding: props.padding, position: props.position },
+		{ width: props.width && props.width, margin: props.margin, padding: props.padding, position: props.position },
 		_react2.default.createElement(
 			_styled.LabelWrapper,
 			{ color: props.title.color },
@@ -73,7 +78,7 @@ var InputWithLabel = exports.InputWithLabel = function InputWithLabel(props) {
 				props.title.text
 			)
 		),
-		_react2.default.createElement(Input, _extends({ width: props.width && props.width }, props.input))
+		_react2.default.createElement(Input, _extends({ width: props.width && '100%' }, props.input))
 	);
 };
 InputWithLabel.propTypes = {

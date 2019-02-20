@@ -9,7 +9,15 @@ import { theme } from './../../styles/_variables'
 
 export const Radio = props => (
   <Wrapper {...props}>
-    <SelectInput disabled={props.disabled} value={props.data.value} type='radio' id={props.id ? props.id : props.data.value ? props.data.value : 'radio'} name={props.name ? props.name : 'radio'} />
+    <SelectInput
+      defaultChecked={props.defaultChecked}
+      checked={props.checked}
+      disabled={props.disabled}
+      value={props.data.value}
+      type='radio'
+      id={props.id ? props.id : props.data.value ? props.data.value : 'radio'}
+      name={props.name ? props.name : 'radio'}
+    />
     <Label htmlFor={props.id ? props.id : props.data.value ? props.data.value : 'radio'}>
       <RadioInputLabel />
       <Text>{props.data.icon && <Icon icon={props.data.icon} />}{props.data.text}</Text>
@@ -17,46 +25,64 @@ export const Radio = props => (
   </Wrapper>
 )
 Radio.propTypes = PROP_CHOICE
-Radio.defaultProps = {
-  theme: theme,
-}
 
 export const Checkbox = props => (
   <Wrapper {...props}>
-    <SelectInput disabled={props.disabled} value={props.data.value} type='checkbox' id={props.id ? props.id : props.data.value ? props.data.value : 'checkbox'} name={props.name ? props.name : 'checkbox'} />
+    <SelectInput
+      defaultChecked={props.defaultChecked}
+      checked={props.checked}
+      disabled={props.disabled}
+      value={props.data.value}
+      type='checkbox'
+      id={props.id ? props.id : props.data.value ? props.data.value : 'checkbox'}
+      name={props.name ? props.name : 'checkbox'}
+    />
     <Label htmlFor={props.id ? props.id : props.data.value ? props.data.value : 'checkbox'}>
       <CheckboxLabel />
-      <Text>{props.data.icon && <Icon icon={props.data.icon} />}{props.data.text}</Text>
+      {
+        props.children
+          ? props.children
+          : <Text>{props.data.icon && <Icon icon={props.data.icon} />}{props.data.text}</Text>
+      }
     </Label>
   </Wrapper>
 )
 Checkbox.propTypes = PROP_CHOICE
-Checkbox.defaultProps = {
-  theme: theme,
-}
 
 export const RadioGroup = props => (
   <WrapperGroup {...props}>
     {
-      props.list.map((v, i) => <Radio margin={i === props.list.length - 1 ? '0' : props.vertical ? '0 0 8px 0' : '0 16px 0 0'} key={v.value} data={v} id={props.id} name={props.name} disabled={props.disabled} />)
+      props.list.map((v, i) => <Radio
+        defaultChecked={props.defaultCheckedValue === v.value}
+        margin={i === props.list.length - 1 ? '0' : props.vertical ? '0 0 8px 0' : '0 16px 0 0'}
+        key={v.value}
+        data={v}
+        id={props.id}
+        name={props.name}
+        disabled={props.disabled}
+      />)
     }
   </WrapperGroup>
 )
 RadioGroup.propTypes = PROP_CHOICE_GROUP
-RadioGroup.defaultProps = {
-  theme: theme,
-}
 
 export const CheckboxGroup = props => (
   <WrapperGroup {...props}>
     {
-      props.list.map((v, i) => <Checkbox margin={i === props.list.length - 1 ? '0' : props.vertical ? '0 0 8px 0' : '0 16px 0 0'} key={v.value} data={v} id={props.id} name={props.name} disabled={props.disabled} />)
+      props.list.map((v, i) => <Checkbox
+        margin={i === props.list.length - 1 ? '0' : props.vertical ? '0 0 8px 0' : '0 16px 0 0'}
+        defaultChecked={props.defaultCheckedValue === v.value}
+        checked={props.checkedValue === v.value ? true : null}
+        key={v.value}
+        data={v}
+        id={props.id}
+        name={props.name}
+        disabled={props.disabled}
+      />)
     }
   </WrapperGroup>
 )
 CheckboxGroup.propTypes = PROP_CHOICE_GROUP
-CheckboxGroup.defaultProps = {
-  theme: theme,
-}
+
 
 export default Radio

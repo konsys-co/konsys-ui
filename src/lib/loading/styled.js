@@ -1,17 +1,16 @@
 import styled, { css } from 'styled-components'
-import { color, fonts } from '../../styles/_variables'
+import { theme } from '../../styles/_variables'
 import { IconStyled } from '../icon/styled'
-
-const mainColor = props => (props.color ? props.color : props.theme.color ? props.theme.color.primaryColor : color.primaryColor)
 
 export const LoadingWrapper = styled.div`
   display: inline-block;
-  font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.normal : fonts.size.normal)};
-  color: ${mainColor};
+  font-size: ${theme.fonts.size.normal};
+  font-family: ${theme.fonts.family.normal}
+  color: ${theme.color.primaryColor};
   > ${IconStyled} {
     margin: 0 0.5em 0 0;
-    font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small)};
-    color: ${mainColor};
+    font-size: ${theme.fonts.size.small};
+    color: ${theme.color.primaryColor};
   }
   ${props => props.vertical && css`
     display: inline-flex;
@@ -22,18 +21,18 @@ export const LoadingWrapper = styled.div`
     }
   `}
   ${props => props.large && css`
-    font-size: ${props.theme.fonts ? props.theme.fonts.size.title : fonts.size.title};
-    font-family: ${fonts.style.light};
+    font-size: ${theme.fonts.size.title};
+    font-weight: ${theme.fonts.style.light};
     > ${IconStyled} {
       margin: ${props.vertical ? '0 0 0.5em 0' : '0 0.5em 0 0'};
-      font-size: ${props.theme.fonts ? props.theme.fonts.size.normal : fonts.size.normal} !important;
+      font-size: ${theme.fonts.size.subTitle} !important;
     }
   `}
   ${props => props.small && css`
-    font-size: ${props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small};
+    font-size: ${theme.fonts.size.small};
     > ${IconStyled} {
       margin: ${props.vertical ? '0 0 0.5em 0' : '0 1em 0 0'};
-      font-size: ${props.theme.fonts ? props.theme.fonts.size.label : fonts.size.label};
+      font-size: ${theme.fonts.size.labell};
     }
   `}
 `

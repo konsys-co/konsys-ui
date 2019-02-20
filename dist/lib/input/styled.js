@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.InputWithLabelWrapper = exports.LabelWrapper = exports.InputWrapper = exports.InputElement = exports.InputWrapperElement = undefined;
+exports.MessageWrapper = exports.InputWithLabelWrapper = exports.LabelWrapper = exports.InputWrapper = exports.InputElement = exports.InputWrapperElement = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n\tdisplay: inline-block;\n\tposition: relative;\n\twidth: 100%;\n'], ['\n\tdisplay: inline-block;\n\tposition: relative;\n\twidth: 100%;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n\toutline: 0 !important;\n\tfont-family: ', ';\n\tfont-weight: normal;\n\tfont-size: ', ';\n\tline-height: 20px;\n\tcolor: ', ';\n\tborder: 1px solid ', ';\n\tborder-radius: ', ';\n\ttransition: ', ';\n\tpadding: 6px 8px;\n\tbox-sizing: border-box;\n\twidth: 100%;\n\t&::placeholder {\n\t\tcolor: ', ';\n\t}\n\t&:focus,\n\t&:hover {\n\t\tborder: 1px solid ', ';\n\t\t~ ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n\t~ ', ' {\n\t\tcolor: ', ';\n\t\tfont-size: ', ';\n\t\ttransition: ', ';\n\t\tposition: absolute;\n\t\ttop: 30%;\n\t\t&.prefix {\n\t\t\tleft: 8px;\n\t\t}\n\t\t&.suffix {\n\t\t\tright: 8px;\n\t\t}\n\t}\n\t', '\n'], ['\n\toutline: 0 !important;\n\tfont-family: ', ';\n\tfont-weight: normal;\n\tfont-size: ', ';\n\tline-height: 20px;\n\tcolor: ', ';\n\tborder: 1px solid ', ';\n\tborder-radius: ', ';\n\ttransition: ', ';\n\tpadding: 6px 8px;\n\tbox-sizing: border-box;\n\twidth: 100%;\n\t&::placeholder {\n\t\tcolor: ', ';\n\t}\n\t&:focus,\n\t&:hover {\n\t\tborder: 1px solid ', ';\n\t\t~ ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n\t~ ', ' {\n\t\tcolor: ', ';\n\t\tfont-size: ', ';\n\t\ttransition: ', ';\n\t\tposition: absolute;\n\t\ttop: 30%;\n\t\t&.prefix {\n\t\t\tleft: 8px;\n\t\t}\n\t\t&.suffix {\n\t\t\tright: 8px;\n\t\t}\n\t}\n\t', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n\toutline: 0 !important;\n\tfont-weight: ', ';\n\tfont-size: ', ';\n\tline-height: 20px;\n\tcolor: ', ';\n\tborder: 1px solid ', ';\n\tborder-radius: ', ';\n\ttransition: ', ';\n\tpadding: 6px 8px;\n\tbox-sizing: border-box;\n\twidth: 100%;\n\t&::placeholder {\n\t\tfont-family: ', ';\n\t\tfont-weight: ', ';\n\t\tcolor: ', ';\n\t}\n\t&:focus,\n\t&:hover {\n\t\tborder: 1px solid ', ';\n\t\t~ ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n\t~ ', ' {\n\t\tcolor: ', ';\n\t\tfont-size: ', ';\n\t\ttransition: ', ';\n\t\tposition: absolute;\n\t\ttop: 30%;\n\t\t&.prefix {\n\t\t\tleft: 8px;\n\t\t}\n\t\t&.suffix {\n\t\t\tright: 8px;\n\t\t}\n\t}\n\t', '\n'], ['\n\toutline: 0 !important;\n\tfont-weight: ', ';\n\tfont-size: ', ';\n\tline-height: 20px;\n\tcolor: ', ';\n\tborder: 1px solid ', ';\n\tborder-radius: ', ';\n\ttransition: ', ';\n\tpadding: 6px 8px;\n\tbox-sizing: border-box;\n\twidth: 100%;\n\t&::placeholder {\n\t\tfont-family: ', ';\n\t\tfont-weight: ', ';\n\t\tcolor: ', ';\n\t}\n\t&:focus,\n\t&:hover {\n\t\tborder: 1px solid ', ';\n\t\t~ ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n\t~ ', ' {\n\t\tcolor: ', ';\n\t\tfont-size: ', ';\n\t\ttransition: ', ';\n\t\tposition: absolute;\n\t\ttop: 30%;\n\t\t&.prefix {\n\t\t\tleft: 8px;\n\t\t}\n\t\t&.suffix {\n\t\t\tright: 8px;\n\t\t}\n\t}\n\t', '\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t&:disabled {\n\t\t\tcursor: not-allowed;\n\t\t\tbackground-color: ', ';\n\t\t\tborder: 1px solid ', ';\n\t\t\tcolor: ', ';\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ';\n\t\t\t}\n\t\t}\n\t'], ['\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t', '\n\t\t&:disabled {\n\t\t\tcursor: not-allowed;\n\t\t\tbackground-color: ', ';\n\t\t\tborder: 1px solid ', ';\n\t\t\tcolor: ', ';\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ';\n\t\t\t}\n\t\t}\n\t']),
     _templateObject4 = _taggedTemplateLiteral(['\n\t\t\tpadding-left: 28px;\n\t\t'], ['\n\t\t\tpadding-left: 28px;\n\t\t']),
     _templateObject5 = _taggedTemplateLiteral(['\n\t\t\tpadding-right: 28px;\n\t\t'], ['\n\t\t\tpadding-right: 28px;\n\t\t']),
@@ -23,13 +23,15 @@ var _templateObject = _taggedTemplateLiteral(['\n\tdisplay: inline-block;\n\tpos
     _templateObject16 = _taggedTemplateLiteral(['left: 6px'], ['left: 6px']),
     _templateObject17 = _taggedTemplateLiteral(['\n\t\t\tborder: 1px solid ', ' !important;\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ' !important;\n\t\t\t}\n\t\t'], ['\n\t\t\tborder: 1px solid ', ' !important;\n\t\t\t~ ', ' {\n\t\t\t\tcolor: ', ' !important;\n\t\t\t}\n\t\t']),
     _templateObject18 = _taggedTemplateLiteral(['\n\t\t\tpadding: ', ';\n\t\t'], ['\n\t\t\tpadding: ', ';\n\t\t']),
-    _templateObject19 = _taggedTemplateLiteral(['\n\tdisplay: inline-block;\n\t', '\n\t> ', ' {\n\t\tdisplay: block;\n\t\tword-break: break-all;\n\t\twidth: 100%;\n\t\tmargin: 8px 0 0;\n\t\ttext-align: right;\n\t}\n'], ['\n\tdisplay: inline-block;\n\t', '\n\t> ', ' {\n\t\tdisplay: block;\n\t\tword-break: break-all;\n\t\twidth: 100%;\n\t\tmargin: 8px 0 0;\n\t\ttext-align: right;\n\t}\n']),
-    _templateObject20 = _taggedTemplateLiteral(['\n\t\t', '\n\t\t', '\n\t'], ['\n\t\t', '\n\t\t', '\n\t']),
+    _templateObject19 = _taggedTemplateLiteral(['\n\tdisplay: inline-flex;\n\tflex-direction: column;\n\tjustify-content: flex-end;\n\twidth: ', ';\n\t', '\n\t> ', ' {\n\t\tdisplay: block;\n\t\tword-break: break-all;\n\t\twidth: 100%;\n\t\tmargin: 8px 0 0;\n\t\ttext-align: right;\n\t}\n'], ['\n\tdisplay: inline-flex;\n\tflex-direction: column;\n\tjustify-content: flex-end;\n\twidth: ', ';\n\t', '\n\t> ', ' {\n\t\tdisplay: block;\n\t\tword-break: break-all;\n\t\twidth: 100%;\n\t\tmargin: 8px 0 0;\n\t\ttext-align: right;\n\t}\n']),
+    _templateObject20 = _taggedTemplateLiteral(['\n\t\t', '\n\t'], ['\n\t\t', '\n\t']),
     _templateObject21 = _taggedTemplateLiteral(['margin: ', ';'], ['margin: ', ';']),
-    _templateObject22 = _taggedTemplateLiteral(['width: ', ';'], ['width: ', ';']),
-    _templateObject23 = _taggedTemplateLiteral(['\n\t> * {\n\t\tcolor: ', ';\n\t}\n'], ['\n\t> * {\n\t\tcolor: ', ';\n\t}\n']),
-    _templateObject24 = _taggedTemplateLiteral(['\n\tdisplay: flex;\n\tflex-direction: ', ';\n\talign-items: ', ';\n\t> ', ' {\n\t\tdisplay: inline-flex;\n\t\talign-items: baseline;\n\t\tmargin: ', ';\n\t\twhite-space: nowrap;\n\t\torder: ', ';\n\t\tfont-family: ', ';\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t}\n\t', '\n'], ['\n\tdisplay: flex;\n\tflex-direction: ', ';\n\talign-items: ', ';\n\t> ', ' {\n\t\tdisplay: inline-flex;\n\t\talign-items: baseline;\n\t\tmargin: ', ';\n\t\twhite-space: nowrap;\n\t\torder: ', ';\n\t\tfont-family: ', ';\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t}\n\t', '\n']),
-    _templateObject25 = _taggedTemplateLiteral(['\n\t\t\tmargin: ', ';\n\t\t'], ['\n\t\t\tmargin: ', ';\n\t\t']);
+    _templateObject22 = _taggedTemplateLiteral(['\n\t> * {\n\t\tcolor: ', ';\n\t}\n'], ['\n\t> * {\n\t\tcolor: ', ';\n\t}\n']),
+    _templateObject23 = _taggedTemplateLiteral(['\n\tdisplay: inline-flex;\n\tflex-direction: ', ';\n\talign-items: ', ';\n\twidth: ', ';\n\t> ', ' {\n\t\tdisplay: inline-flex;\n\t\talign-items: baseline;\n\t\tmargin: ', ';\n\t\twhite-space: nowrap;\n\t\torder: ', ';\n\t\tfont-family: ', ';\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t}\n\t', '\n'], ['\n\tdisplay: inline-flex;\n\tflex-direction: ', ';\n\talign-items: ', ';\n\twidth: ', ';\n\t> ', ' {\n\t\tdisplay: inline-flex;\n\t\talign-items: baseline;\n\t\tmargin: ', ';\n\t\twhite-space: nowrap;\n\t\torder: ', ';\n\t\tfont-family: ', ';\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t}\n\t', '\n']),
+    _templateObject24 = _taggedTemplateLiteral(['\n\t\t', '\n\t\t', '\n\t'], ['\n\t\t', '\n\t\t', '\n\t']),
+    _templateObject25 = _taggedTemplateLiteral(['\n\t\t\tmargin: ', ';\n\t\t'], ['\n\t\t\tmargin: ', ';\n\t\t']),
+    _templateObject26 = _taggedTemplateLiteral(['\n\ttext-align: right;\n\tmargin: 8px 0 0;\n\t', '\n\t', '\n'], ['\n\ttext-align: right;\n\tmargin: 8px 0 0;\n\t', '\n\t', '\n']),
+    _templateObject27 = _taggedTemplateLiteral(['\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t'], ['\n\t\t> ', ' {\n\t\t\tfont-size: ', ';\n\t\t}\n\t']);
 
 var _styledComponents = require('styled-components');
 
@@ -53,13 +55,13 @@ var defaultSmallMinWidth = '210px';
 
 var InputWrapperElement = exports.InputWrapperElement = _styledComponents2.default.div(_templateObject);
 
-var InputElement = exports.InputElement = _styledComponents2.default.input(_templateObject2, _variables.fonts.style.extraLight, function (props) {
+var InputElement = exports.InputElement = _styledComponents2.default.input(_templateObject2, _variables.theme.fonts.style.extraLight, function (props) {
 	return props.theme.fonts ? props.theme.fonts.size.normal : _variables.fonts.size.normal;
 }, _variables.theme.color.textColor, _variables.color.paleGray, function (props) {
 	return props.rectangle ? 0 : '4px';
 }, function (props) {
 	return props.theme.animate ? props.theme.animate.transition : _variables.animate.transition;
-}, _variables.color.paleGray, _variables.theme.color.primaryColor, _styled2.default, _variables.theme.color.primaryColor, _styled2.default, _variables.color.paleGray, function (props) {
+}, _variables.theme.fonts.family.normal, _variables.theme.fonts.style.extraLight, _variables.color.paleGray, _variables.theme.color.primaryColor, _styled2.default, _variables.theme.color.primaryColor, _styled2.default, _variables.color.paleGray, function (props) {
 	return props.theme.fonts ? props.theme.fonts.size.small : _variables.fonts.size.small;
 }, function (props) {
 	return props.theme.animate ? props.theme.animate.transition : _variables.animate.transition;
@@ -76,15 +78,19 @@ var InputElement = exports.InputElement = _styledComponents2.default.input(_temp
 });
 
 var InputWrapper = exports.InputWrapper = _styledComponents2.default.div(_templateObject19, function (props) {
-	return (0, _styledComponents.css)(_templateObject20, props.margin && (0, _styledComponents.css)(_templateObject21, props.margin), props.width && (0, _styledComponents.css)(_templateObject22, props.width));
+	return props.width ? props.width : defaultMinWidth;
+}, function (props) {
+	return (0, _styledComponents.css)(_templateObject20, props.margin && (0, _styledComponents.css)(_templateObject21, props.margin));
 }, _text.Label);
 
-var LabelWrapper = exports.LabelWrapper = _styledComponents2.default.span(_templateObject23, _variables.theme.color.textColor);
+var LabelWrapper = exports.LabelWrapper = _styledComponents2.default.span(_templateObject22, _variables.theme.color.textColor);
 
-var InputWithLabelWrapper = exports.InputWithLabelWrapper = _styledComponents2.default.div(_templateObject24, function (props) {
+var InputWithLabelWrapper = exports.InputWithLabelWrapper = _styledComponents2.default.div(_templateObject23, function (props) {
 	return props.position === 'left' || props.position === 'right' ? 'row' : 'column';
 }, function (props) {
 	return props.position === 'left' || props.position === 'right' ? 'center' : 'left';
+}, function (props) {
+	return props.width || 'auto';
 }, LabelWrapper, function (props) {
 	return props.position === 'left' ? '0 24px 0 0' : props.position === 'right' ? '0 0 0 24px' : '0 0 16px';
 }, function (props) {
@@ -94,5 +100,11 @@ var InputWithLabelWrapper = exports.InputWithLabelWrapper = _styledComponents2.d
 }, _styled2.default, function (props) {
 	return props.theme.fonts ? props.theme.fonts.size.small : _variables.fonts.size.small;
 }, function (props) {
-	return (0, _styledComponents.css)(_templateObject20, props.margin && (0, _styledComponents.css)(_templateObject25, props.margin), props.padding && (0, _styledComponents.css)(_templateObject25, props.padding));
+	return (0, _styledComponents.css)(_templateObject24, props.margin && (0, _styledComponents.css)(_templateObject25, props.margin), props.padding && (0, _styledComponents.css)(_templateObject25, props.padding));
+});
+
+var MessageWrapper = exports.MessageWrapper = _styledComponents2.default.div(_templateObject26, function (props) {
+	return props.large && (0, _styledComponents.css)(_templateObject27, _text.Label, props.theme.fonts ? props.theme.fonts.size.normal : _variables.fonts.size.normal);
+}, function (props) {
+	return props.small && (0, _styledComponents.css)(_templateObject27, _text.Label, props.theme.fonts ? props.theme.fonts.size.label : _variables.fonts.size.label);
 });

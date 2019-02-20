@@ -104,6 +104,9 @@ storiesOf('Text', module)
     <P display='block'>P - คอนซิส คอมปานี</P>
     <P>P - คอนซิส คอมปานี</P>
   </DisplayCode>)
+  .add('with custom textAlign', () => <DisplayCode title='with custom text align' code="<P display='block' textAlign='center'>P - คอนซิส คอมปานี</P>">
+    <P display='block' textAlign='center'>P - คอนซิส คอมปานี</P>
+  </DisplayCode>)
   .add('with custom font', () => <DisplayCode title='with custom font' code={`
   <H2 font='Sarabun-semibold'>H2 - คอนซิส คอมปานี</H2><br/>
 
@@ -135,13 +138,7 @@ storiesOf('Icon', module)
 /* ======================== BUTTON ======================== */
 storiesOf('Button', module)
   .add('button default', () => <DisplayCode title='Normal Button' code='<Button />'>
-    <ThemeProvider theme={{
-      color: {
-        primaryColor: '#30B2C3',
-      }
-    }}>
-      <Button />
-    </ThemeProvider>
+    <Button />
   </DisplayCode>)
   .add('button with text', () => <DisplayCode title='Button with text' code='<Button text="Custom text button 😎" />'>
     <Button text="Custom text button 😎" />
@@ -184,6 +181,11 @@ storiesOf('Button', module)
   <Button small text="Custom text button 😎" />`}>
     <Button large text="Custom text button 😎" /><br/><br/>
     <Button small text="Custom text button 😎" />
+  </DisplayCode>)
+  .add('button with loading state and loading text', () => <DisplayCode title='button with loading state and customize loading text' code={`<Button loading text='Submit' />
+    <Button loading loadingText='รอหน่อยน้า กำลังโหลด 😅' />`}>
+    <Button loading text='Submit' /><br/><br/>
+    <Button loading loadingText='รอหน่อยน้า กำลังโหลด 😅' />
   </DisplayCode>)
 
 
@@ -231,6 +233,15 @@ storiesOf('Input', module)
     <Input state='error' /><br/><br/>
     <Input state='warning' />
   </DisplayCode>)
+  .add('with custom state and message', () => <DisplayCode title='with custom state and message' code={`<Input state='success' message='รหัสผ่านไม่ถูกต้อง รหัสผ่านต้องประกอบด้วย ตัวอักษรใหญ่ ตัวอักษรเล็ก และตัวเลข' />
+  
+  <Input state='error' message='รหัสผ่านไม่ถูกต้อง รหัสผ่านต้องประกอบด้วย ตัวอักษรใหญ่ ตัวอักษรเล็ก และตัวเลข' />
+  
+  <Input state='warning' message='รหัสผ่านไม่ถูกต้อง รหัสผ่านต้องประกอบด้วย ตัวอักษรใหญ่ ตัวอักษรเล็ก และตัวเลข' />`}>
+    <Input state='success' message='รหัสผ่านไม่ถูกต้อง รหัสผ่านต้องประกอบด้วย ตัวอักษรใหญ่ ตัวอักษรเล็ก และตัวเลข' /><br/><br/>
+    <Input state='error' message='รหัสผ่านไม่ถูกต้อง รหัสผ่านต้องประกอบด้วย ตัวอักษรใหญ่ ตัวอักษรเล็ก และตัวเลข' /><br/><br/>
+    <Input state='warning' message='รหัสผ่านไม่ถูกต้อง รหัสผ่านต้องประกอบด้วย ตัวอักษรใหญ่ ตัวอักษรเล็ก และตัวเลข' />
+  </DisplayCode>)
   .add('with disabled', () => <DisplayCode title='with disabled' code='<Input disabled />'>
     <Input disabled />
   </DisplayCode>)
@@ -263,9 +274,9 @@ storiesOf('Input with label', module)
   </DisplayCode>)
   .add('with custom input', () => <DisplayCode title='with custom input' code={`<InputWithLabel title={{ text: 'กรุณากรอกชื่อ' }} input={{ color: coralColor }} />
   
-  <InputWithLabel title={{ text: 'บาท' }} input={{ state: 'success', large: true }} />`}>
+  <InputWithLabel width="80%" title={{ text: 'ที่อยู่' }} input={{ state: 'warning', large: true, message: "กรอกที่อยู๋ไม่ครบถ้วน" }} />`}>
     <InputWithLabel title={{ text: 'กรุณากรอกชื่อ' }} input={{ color: coralColor }} /><br/><br/>
-    <InputWithLabel title={{ text: 'บาท' }} input={{ state: 'success', large: true }} />
+    <InputWithLabel width="80%" title={{ text: 'ที่อยู่' }} input={{ state: 'warning', large: true, message: "กรอกที่อยู่ไม่ครบถ้วน" }} />
   </DisplayCode>)
 
 
@@ -281,6 +292,12 @@ storiesOf('Radio', module)
   <Radio margin='0 0 0 16px' name='gender' data={{ value: 'male', text: 'เพศชาย' }} />`}>
     <Radio name='gender' data={{ value: 'female', text: 'เพศหญิง' }} />
     <Radio margin='0 0 0 16px' name='gender' data={{ value: 'male', text: 'เพศชาย' }} />
+  </DisplayCode>)
+  .add('with default checked', () => <DisplayCode title='with default checked' code="<Radio defaultChecked data={{ value: 'yes', text: 'Are you a crown 🤡 ?' }} />">
+    <Radio defaultChecked data={{ value: 'yes', text: 'Are you a crown 🤡 ?' }} />
+  </DisplayCode>)
+  .add('with controll checked', () => <DisplayCode title='with controll checked by state' code="<Radio defaultChecked data={{ value: 'yes', text: 'Are you a crown 🤡 ?' }} />">
+    <Radio checked data={{ value: 'yes', text: 'Are you a crown 🤡 ?' }} />
   </DisplayCode>)
 
 /* ======================== RADIO GROUP ======================== */
@@ -327,6 +344,20 @@ storiesOf('Radio Group', module)
       },
     ]} />
   </DisplayCode>)
+  .add('with default checked', () => <DisplayCode title='with default checked' code={`<RadioGroup defaultCheckedValue='female' list={[
+    { value: 'male', text: 'Male', },
+    { value: 'female', text: 'Female', },
+  ]} />`}>
+    <RadioGroup defaultCheckedValue='female' list={[
+      {
+        value: 'male',
+        text: 'Male',
+      }, {
+        value: 'female',
+        text: 'Female',
+      },
+    ]} />
+  </DisplayCode>)
 
 
 /* ======================== CHECKBOX ======================== */
@@ -340,6 +371,12 @@ storiesOf('Checkbox', module)
   .add('with margin', () => <DisplayCode title='with margin' code={`<Checkbox margin='0 16px' data={{ value: 'accept', text: 'ยอมรับ' }} />`}>
     <Checkbox margin='0 16px' data={{ value: 'accept', text: 'ยอมรับ' }} />
   </DisplayCode>)
+  .add('with default checked', () => <DisplayCode title='with default checked' code="<Checkbox defaultChecked data={{ value: 'c', text: '🤡' }} />">
+    <Checkbox defaultChecked data={{ value: 'c', text: '🤡', }} />
+  </DisplayCode>)
+  .add('with controll checked', () => <DisplayCode title='with controll checked by state' code="<Checkbox checked data={{ value: 'c', text: '🤡' }} />">
+    <Checkbox checked data={{ value: 'c', text: '🤡', }} />
+  </DisplayCode>)
 
 /* ======================== CHECKBOX GROUP ======================== */
 storiesOf('Checkbox Group', module)
@@ -347,7 +384,7 @@ storiesOf('Checkbox Group', module)
     { value: 'male', text: 'Male', icon: 'icon-user', },
     { value: 'female', text: 'Female', icon: 'icon-user-female', },
   ]} />`}>
-    <CheckboxGroup list={[
+    <CheckboxGroup defaultCheckedValue list={[
       {
         value: 'male',
         text: 'Male',
@@ -384,6 +421,38 @@ storiesOf('Checkbox Group', module)
       }, {
         value: 'female',
         text: 'Female',
+      },
+    ]} />
+  </DisplayCode>)
+  .add('with default checked value', () => <DisplayCode title='with default checked' code={`<CheckboxGroup defaultCheckedValue='male' list={[
+    { value: 'male', text: 'Male', icon: 'icon-user', },
+    { value: 'female', text: 'Female', icon: 'icon-user-female', },
+  ]} />`}>
+    <CheckboxGroup defaultCheckedValue='male' list={[
+      {
+        value: 'male',
+        text: 'Male',
+        icon: 'icon-user',
+      }, {
+        value: 'female',
+        text: 'Female',
+        icon: 'icon-user-female',
+      },
+    ]} />
+  </DisplayCode>)
+  .add('with controll checked', () => <DisplayCode title='with controll checked by state' code={`<CheckboxGroup checkedValue='female' list={[
+    { value: 'male', text: 'Male', icon: 'icon-user', },
+    { value: 'female', text: 'Female', icon: 'icon-user-female', },
+  ]} />`}>
+    <CheckboxGroup checkedValue='female' list={[
+      {
+        value: 'male',
+        text: 'Male',
+        icon: 'icon-user',
+      }, {
+        value: 'female',
+        text: 'Female',
+        icon: 'icon-user-female',
       },
     ]} />
   </DisplayCode>)
@@ -614,7 +683,7 @@ storiesOf('Loading', module)
     <Loading />
   </DisplayCode>)
   .add('with text', () => <DisplayCode title='with text' code={`<Loading text='Loading your profile ...' />`}>
-    <Loading text='Loading your profile ...' />
+    <Loading text='กำลังเข้าสู่ระบบ' />
   </DisplayCode>)
   .add('with size', () => <DisplayCode title='with size' code={`<Loading large text='Loading your profile ...' />
 
@@ -622,8 +691,8 @@ storiesOf('Loading', module)
     <Loading large text='Loading your profile ...' /><br/><br/>
     <Loading small text='Loading your profile ...' />
   </DisplayCode>)
-  .add('with vertical position', () => <DisplayCode title='with vertical position' code={`<Loading large vertical text='Loading your profile ...' />`}>
-    <Loading large vertical text='Loading your profile ...' />
+  .add('with vertical position', () => <DisplayCode title='with vertical position' code={`<Loading large vertical text='กำลังเข้าสู่ระบบ' />`}>
+    <Loading large vertical text='กำลังเข้าสู่ระบบ' />
   </DisplayCode>)
   .add('only load icon', () => <DisplayCode title='only load icon' code={`<LoadingIcon color={coralColor} />`}>
     <LoadingIcon color={coralColor} />

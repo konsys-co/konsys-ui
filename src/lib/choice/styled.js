@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { P } from '../text'
-import { color, fonts } from '../../styles/_variables'
+import { theme } from '../../styles/_variables'
 import { IconStyled } from '../icon/styled'
 
 export const SelectInput = styled.input`
@@ -17,7 +17,7 @@ export const RadioInputLabel = styled.span`
   height: 16px;
   display: inline-block;
   position: relative;
-  border: 1px solid ${color.paleGray};
+  border: 1px solid ${theme.color.paleGray};
   border-radius: 50%;
   cursor: pointer;
   &::before {
@@ -25,11 +25,12 @@ export const RadioInputLabel = styled.span`
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: ${props => (props.color ? props.color : props.theme.color ? props.theme.color.secondaryColor : color.secondaryColor)};
+    background-color: ${props => (props.color ? props.color : theme.color.secondaryColor)};
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all ${theme.animate.time.opacity} ease;
     opacity: 0;
   }
 `
@@ -42,8 +43,9 @@ export const CheckboxLabel = styled(RadioInputLabel)`
     width: auto;
     height: auto;
     background: none;
-    font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.small : fonts.size.small)};
-    color: ${props => (props.color ? props.color : props.theme.color ? props.theme.color.secondaryColor : color.secondaryColor)};
+    transition: all ${theme.animate.time.opacity} ease;
+    font-size: ${theme.fonts.size.small};
+    color: ${props => (props.color ? props.color : theme.color.secondaryColor)};
   }
 `
 
@@ -53,7 +55,7 @@ export const Text = styled(P)`
   align-items: center;
   padding: 0 0 0 8px;
   > ${IconStyled} {
-    font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.label : fonts.size.label)} !important;
+    font-size: ${theme.fonts.size.label} !important;
     margin-right: 8px;
   }
 `
@@ -72,15 +74,15 @@ export const Wrapper = styled.div`
     &:disabled + ${Label} {
       ${Text} {
         cursor: not-allowed;
-        color: ${color.lightGray};
+        color: ${theme.color.lightGray};
         > ${IconStyled} {
-          color: ${color.lightGray};
+          color: ${theme.color.lightGray};
         }
       }
       > ${CheckboxLabel},
       > ${RadioInputLabel} {
         cursor: not-allowed;
-        background-color: ${color.light};
+        background-color: ${theme.color.light};
       }
     }
   }

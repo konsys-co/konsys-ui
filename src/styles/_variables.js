@@ -58,6 +58,7 @@ export const animate = {
   time: {
     loading: '1s',
     maxHeight: '0.5s',
+    opacity: '0.2s',
   },
   transition: 'all 0.5s ease',
 }
@@ -88,7 +89,7 @@ const animateTheme = props => (props.theme ? props.theme.animate : animate);
 
 /* ------------- FONT ------------- */
 
-const fontExtraLight = props => (props.theme.fonts ? props.theme.fonts.style.extraLight : fonts.size.extraLight);
+const fontExtraLight = props => (props.theme.fonts ? props.theme.fonts.style.extraLight : fonts.style.extraLight);
 const fontLight = props => (props.theme.fonts ? props.theme.fonts.style.light : fonts.size.light);
 const fontRegular = props => (props.theme.fonts ? props.theme.fonts.style.regular : fonts.size.regular);
 const fontMedium = props => (props.theme.fonts ? props.theme.fonts.style.medium : fonts.size.medium);
@@ -109,6 +110,7 @@ const fontFamilyNormal = props => (props.theme.fonts ? props.theme.fonts.family.
 const animateSpin = props => (props.theme.animate ? props.theme.animate.spin : animate.spin);
 const animateTimeLoading = props => (props.theme.animate.time ? props.theme.animate.time.loading : animate.time.loading);
 const animateTimeMaxHeight = props => (props.theme.animate.time ? props.theme.animate.time.maxHeight : animate.time.maxHeight);
+const animateTimeOpacity = props => (props.theme.animate ? props.theme.animate.time.opacity : animate.time.opacity);
 const animateTransition = props => (props.theme.animate ? props.theme.animate.transition : animate.time.transition);
 
 export const theme = {
@@ -122,6 +124,8 @@ export const theme = {
     error: errorColor,
     warning: warningColor,
     paleGray: paleGray,
+    light: light,
+    lightGray: lightGray,
   },
   shadow: {
     selectShadow: '0 0 20px',
@@ -152,6 +156,7 @@ export const theme = {
     time: {
       loading: animateTimeLoading,
       maxHeight: animateTimeMaxHeight,
+      opacity: animateTimeOpacity,
     },
     transition: animateTransition,
   },

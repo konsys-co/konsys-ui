@@ -1,12 +1,12 @@
 import React from 'react'
 import { string, element, bool, oneOf, shape, object } from 'prop-types'
 import Icon from '../icon'
-import { Label, P } from '../text'
+import { Label, P, SmallText } from '../text'
 import {
 	InputWrapper, InputWrapperElement, InputElement,
-	InputWithLabelWrapper, LabelWrapper,
+	InputWithLabelWrapper, LabelWrapper, MessageWrapper,
 } from './styled'
-import { color } from '../../styles/_variables'
+import { theme } from '../../styles/_variables'
 
 export const Input = props => (
 	<InputWrapper width={props.width} large={props.large} small={props.small} margin={props.margin} padding={props.padding}>
@@ -16,7 +16,10 @@ export const Input = props => (
 			{props.suffix}
 		</InputWrapperElement>
 		{
-			props.message && <Label color={props.error ? color.error : props.success ? color.success : props.warning ? color.warning : color.lightGray}>{props.message}</Label>
+			props.message
+			&& <MessageWrapper large={props.large} small={props.small}>
+				<Label color={props.state === 'error' ? theme.color.error : props.state === 'success' ? theme.color.success : props.state === 'warning' ? theme.color.warning : theme.color.lightGray}>{props.message}</Label>
+			</MessageWrapper>
 		}
 	</InputWrapper>
 )
@@ -34,10 +37,11 @@ Input.propTypes = {
 	disabled: bool,
 	large: bool,
 	small: bool,
+	message: string,
 }
 
 export const InputWithLabel = props => (
-	<InputWithLabelWrapper margin={props.margin} padding={props.padding} position={props.position}>
+	<InputWithLabelWrapper width={props.width && props.width} margin={props.margin} padding={props.padding} position={props.position}>
 		<LabelWrapper color={props.title.color}>
 			{
 				props.title.icon &&
@@ -45,7 +49,7 @@ export const InputWithLabel = props => (
 			}
 			<P bold={props.title.bold}>{props.title.text}</P>
 		</LabelWrapper>
-		<Input width={props.width && props.width} {...props.input} />
+		<Input width={props.width && '100%'} {...props.input} />
 	</InputWithLabelWrapper>
 )
 InputWithLabel.propTypes = {

@@ -1,6 +1,5 @@
 import React from 'react'
 import { string, bool, oneOf, object } from 'prop-types'
-import { withTheme } from 'styled-components'
 import { theme } from './../../styles/_variables'
 import Icon from '../icon'
 import { P } from '../text'
@@ -13,17 +12,22 @@ const Button = props => (
   {
     props.onlyIcon
       ? <Icon key='button-icon' spin={props.spinIcon} icon={props.icon} />
-      : props.icon
-        ? props.rightIcon
-          ? [
-            <span key='button-text'>{ props.text ? props.text : 'Button text here' }</span>,
-            <Icon key='button-icon' spin={props.spinIcon} icon={props.icon} />,
-          ]
-          : [
-            <Icon key='button-icon' spin={props.spinIcon} icon={props.icon} />,
-            <span key='button-text'>{ props.text ? props.text : 'Button text here' }</span>,
-          ]
-        : <P key='button-text'>{ props.text ? props.text : 'Button text here เทส' }</P>
+      : props.loading
+        ? [
+          <Icon key='button-icon' spin icon="fal fa-spinner-third" />,
+          <span key='button-text'>{ props.loadingText ? props.loadingText : props.text ? props.text : 'Button text here' }</span>,
+        ]
+        : props.icon
+          ? props.rightIcon
+            ? [
+              <span key='button-text'>{ props.text ? props.text : 'Button text here' }</span>,
+              <Icon key='button-icon' spin={props.spinIcon} icon={props.icon} />,
+            ]
+            : [
+              <Icon key='button-icon' spin={props.spinIcon} icon={props.icon} />,
+              <span key='button-text'>{ props.text ? props.text : 'Button text here' }</span>,
+            ]
+          : <P key='button-text'>{ props.text ? props.text : 'Button text here' }</P>
   }
   </Btn>
 )
@@ -41,6 +45,8 @@ Button.propTypes = {
   rightIcon: bool,
   onlyIcon: bool,
   spinIcon: bool,
+  loading: bool,
+  loadingText: string,
 }
 
-export default withTheme(Button)
+export default Button

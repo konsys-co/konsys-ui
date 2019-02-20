@@ -10,6 +10,7 @@ export const textStyle = css`
   ${props => props.font && css`
     font-family: ${props.font};
   `}
+  text-align: ${props => (props.textAlign ? props.textAlign : 'left')};
 `
 
 export const H1 = styled.h1`

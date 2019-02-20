@@ -125,7 +125,7 @@ var animateTheme = function animateTheme(props) {
 /* ------------- FONT ------------- */
 
 var fontExtraLight = function fontExtraLight(props) {
-  return props.theme.fonts ? props.theme.fonts.style.extraLight : fonts.size.extraLight;
+  return props.theme.fonts ? props.theme.fonts.style.extraLight : fonts.style.extraLight;
 };
 var fontLight = function fontLight(props) {
   return props.theme.fonts ? props.theme.fonts.style.light : fonts.size.light;
@@ -162,6 +162,10 @@ var fontHeading = function fontHeading(props) {
   return props.theme.fonts ? props.theme.fonts.size.heading : fonts.size.heading;
 };
 
+var fontFamilyNormal = function fontFamilyNormal(props) {
+  return props.theme.fonts ? props.theme.fonts.family.normal : 'kanit';
+};
+
 /* ------------- ANIMATE ------------- */
 
 var animateSpin = function animateSpin(props) {
@@ -193,6 +197,9 @@ var theme = exports.theme = {
     selectShadow: '0 0 20px'
   },
   fonts: {
+    family: {
+      normal: fontFamilyNormal
+    },
     style: {
       extraLight: fontExtraLight,
       light: fontLight,

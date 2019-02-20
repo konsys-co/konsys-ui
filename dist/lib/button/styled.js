@@ -5,10 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Btn = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n  padding: 8px 24px;\n  border-radius: 4px;\n  border: 1px solid ', ';\n  color: ', ';\n  background-color: ', ';\n  cursor: pointer;\n  font-size: ', ';\n  transition: ', ';\n  font-family: ', ';\n  ', '\n  outline: 0 !important;\n  > ', ' {\n    font-size: ', ';\n    margin: ', ';\n    color: ', ';\n  }\n  &:hover {\n    border: 1px solid ', ';\n    color: ', ';\n  }\n  &:disabled {\n    cursor: not-allowed;\n    background-color: ', ' !important;\n    border: 1px solid ', ' !important;\n    color: ', ' !important;\n  }\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n'], ['\n  padding: 8px 24px;\n  border-radius: 4px;\n  border: 1px solid ', ';\n  color: ', ';\n  background-color: ', ';\n  cursor: pointer;\n  font-size: ', ';\n  transition: ', ';\n  font-family: ', ';\n  ', '\n  outline: 0 !important;\n  > ', ' {\n    font-size: ', ';\n    margin: ', ';\n    color: ', ';\n  }\n  &:hover {\n    border: 1px solid ', ';\n    color: ', ';\n  }\n  &:disabled {\n    cursor: not-allowed;\n    background-color: ', ' !important;\n    border: 1px solid ', ' !important;\n    color: ', ' !important;\n  }\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  padding: 8px 24px;\n  border-radius: 4px;\n  border: 1px solid ', ';\n  color: ', ';\n  background-color: ', ';\n  cursor: pointer;\n  font-size: ', ';\n  transition: ', ';\n  font-family: ', ';\n  ', '\n  outline: 0 !important;\n  > ', ' {\n    font-size: ', ';\n    margin: ', ';\n    color: ', ';\n  }\n  > ', ' {\n    color: ', ';\n  }\n  &:hover {\n    border: 1px solid ', ';\n    color: ', ';\n    > ', ' {\n      color: ', ';\n    }\n  }\n  &:disabled {\n    cursor: not-allowed;\n    background-color: ', ' !important;\n    border: 1px solid ', ' !important;\n    color: ', ' !important;\n  }\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n'], ['\n  padding: 8px 24px;\n  border-radius: 4px;\n  border: 1px solid ', ';\n  color: ', ';\n  background-color: ', ';\n  cursor: pointer;\n  font-size: ', ';\n  transition: ', ';\n  font-family: ', ';\n  ', '\n  outline: 0 !important;\n  > ', ' {\n    font-size: ', ';\n    margin: ', ';\n    color: ', ';\n  }\n  > ', ' {\n    color: ', ';\n  }\n  &:hover {\n    border: 1px solid ', ';\n    color: ', ';\n    > ', ' {\n      color: ', ';\n    }\n  }\n  &:disabled {\n    cursor: not-allowed;\n    background-color: ', ' !important;\n    border: 1px solid ', ' !important;\n    color: ', ' !important;\n  }\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n  ', '\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    margin: ', ';\n  '], ['\n    margin: ', ';\n  ']),
     _templateObject3 = _taggedTemplateLiteral(['\n    padding: 0;\n    width: 40px;\n    height: 40px;\n    border-radius: 100%;\n    > ', ' {\n      margin: 0;\n    }\n  '], ['\n    padding: 0;\n    width: 40px;\n    height: 40px;\n    border-radius: 100%;\n    > ', ' {\n      margin: 0;\n    }\n  ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n    border: 1px solid ', ';\n    background-color: ', ';\n    color: ', ';\n    > ', ' {\n      color: ', ';\n    }\n    &:hover {\n      background-color: ', ';\n      color: ', ';\n    }\n  '], ['\n    border: 1px solid ', ';\n    background-color: ', ';\n    color: ', ';\n    > ', ' {\n      color: ', ';\n    }\n    &:hover {\n      background-color: ', ';\n      color: ', ';\n    }\n  ']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    border: 1px solid ', ';\n    background-color: ', ';\n    color: ', ';\n    > ', ',\n    > ', ' {\n      color: ', ';\n    }\n    &:hover {\n      background-color: ', ';\n      color: ', ';\n      > ', ',\n      > ', ' {\n        color: ', ';\n      }\n    }\n  '], ['\n    border: 1px solid ', ';\n    background-color: ', ';\n    color: ', ';\n    > ', ',\n    > ', ' {\n      color: ', ';\n    }\n    &:hover {\n      background-color: ', ';\n      color: ', ';\n      > ', ',\n      > ', ' {\n        color: ', ';\n      }\n    }\n  ']),
     _templateObject5 = _taggedTemplateLiteral(['\n    width: 100%;\n  '], ['\n    width: 100%;\n  ']),
     _templateObject6 = _taggedTemplateLiteral(['\n    font-size: ', ';\n    padding: 16px 48px;\n    > ', ' {\n      font-size: ', ';\n      margin: ', ';\n    }\n  '], ['\n    font-size: ', ';\n    padding: 16px 48px;\n    > ', ' {\n      font-size: ', ';\n      margin: ', ';\n    }\n  ']),
     _templateObject7 = _taggedTemplateLiteral(['\n    font-size: ', ';\n    padding: 4px 16px;\n    border-radius: 2px;\n    > ', ' {\n      font-size: 0.5em;\n      margin: ', ';\n    }\n  '], ['\n    font-size: ', ';\n    padding: 4px 16px;\n    border-radius: 2px;\n    > ', ' {\n      font-size: 0.5em;\n      margin: ', ';\n    }\n  ']),
@@ -21,6 +21,8 @@ var _styledComponents = require('styled-components');
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _styled = require('../icon/styled');
+
+var _text = require('../text');
 
 var _variables = require('../../styles/_variables');
 
@@ -47,14 +49,14 @@ var Btn = exports.Btn = _styledComponents2.default.button(_templateObject, butto
   return props.theme.fonts ? props.theme.fonts.size.normal : _variables.fonts.size.normal;
 }, function (props) {
   return props.theme.animate ? props.theme.animate.transition : _variables.animate.transition;
-}, _variables.fonts.style.extraLight, function (props) {
+}, _variables.theme.fonts.family.normal, function (props) {
   return props.margin && (0, _styledComponents.css)(_templateObject2, props.margin);
 }, _styled.IconStyled, _variables.fonts.size.label, function (props) {
   return props.rightIcon ? '0 0 0 8px' : '0 8px 0 0';
-}, buttonMainColor, buttonHoverColor, buttonHoverColor, buttonDisabledColor, buttonDisabledColor, buttonDisabledTextColor, function (props) {
+}, buttonMainColor, _text.P, buttonMainColor, buttonHoverColor, buttonHoverColor, _text.P, buttonHoverColor, buttonDisabledColor, buttonDisabledColor, buttonDisabledTextColor, function (props) {
   return props.onlyIcon && (0, _styledComponents.css)(_templateObject3, _styled.IconStyled);
 }, function (props) {
-  return props.inverse && (0, _styledComponents.css)(_templateObject4, buttonMainColor, buttonMainColor, _variables.color.offWhite, _styled.IconStyled, _variables.color.offWhite, buttonHoverColor, _variables.color.offWhite);
+  return props.inverse && (0, _styledComponents.css)(_templateObject4, buttonMainColor, buttonMainColor, _variables.color.offWhite, _text.P, _styled.IconStyled, _variables.color.offWhite, buttonHoverColor, _variables.color.offWhite, _styled.IconStyled, _text.P, _variables.color.offWhite);
 }, function (props) {
   return props.fullWidth && (0, _styledComponents.css)(_templateObject5);
 }, function (props) {

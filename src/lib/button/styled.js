@@ -17,7 +17,7 @@ export const Btn = styled.button`
   cursor: pointer;
   font-size: ${props => (props.theme.fonts ? props.theme.fonts.size.normal : fonts.size.normal)};
   transition: ${props => (props.theme.animate ? props.theme.animate.transition : animate.transition)};
-  font-family: ${fonts.style.extraLight};
+  font-family: ${theme.fonts.family.normal};
   ${props => props.margin && css`
     margin: ${props.margin};
   `}
@@ -81,12 +81,14 @@ export const Btn = styled.button`
     }
   `}
   ${props => props.small && css`
-    font-size: ${props.theme.fonts ? props.theme.fonts.size.label : fonts.size.label};
     padding: 4px 16px;
     border-radius: 2px;
     > ${IconStyled} {
       font-size: 0.5em;
       margin: ${props.rightIcon ? '0 0 0 6px' : '0 6px 0 0'};
+    }
+    > ${P} {
+      font-size: ${theme.fonts.size.small};
     }
   `}
   ${props => css`
