@@ -6,11 +6,11 @@ export const LoadingWrapper = styled.div`
   display: inline-block;
   font-size: ${theme.fonts.size.normal};
   font-family: ${theme.fonts.family.normal}
-  color: ${theme.color.primaryColor};
+  color: ${props => props.color ? props.color : theme.color.primaryColor};
   > ${IconStyled} {
     margin: 0 0.5em 0 0;
     font-size: ${theme.fonts.size.small};
-    color: ${theme.color.primaryColor};
+    color: ${props => props.color ? props.color : theme.color.primaryColor};
   }
   ${props => props.vertical && css`
     display: inline-flex;

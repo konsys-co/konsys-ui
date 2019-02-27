@@ -17,7 +17,8 @@ import {
   Button, Input, InputWithLabel, Icon,
   Radio, RadioGroup, Checkbox, CheckboxGroup,
   H1, H2, H3, H4, P, SmallText, Label, TextLink,
-  Loading, LoadingIcon, Select, Collapse,
+  Loading, LoadingIcon, Select, Collapse, Dropdown,
+  SelectChoiceWrapper,
 } from '../src/'
 
 addDecorator(withNotes);
@@ -175,6 +176,9 @@ storiesOf('Button', module)
   </DisplayCode>)
   .add('button with full width', () => <DisplayCode title='button with full width style' code='<Button fullWidth text="Custom text button 😎" />'>
     <Button fullWidth text="Custom text button 😎" />
+  </DisplayCode>)
+  .add('button with full width and space between', () => <DisplayCode title='button with full width and space between' code='<Button spaceBetween fullWidth icon="fas fa-caret-down" rightIcon text="Custom text button 😎" />'>
+    <Button spaceBetween fullWidth icon="fas fa-caret-down" rightIcon text="Custom text button 😎" />
   </DisplayCode>)
   .add('button with button size', () => <DisplayCode title='button with button size' code={`<Button large text="Custom text button 😎" />
   
@@ -457,6 +461,67 @@ storiesOf('Checkbox Group', module)
     ]} />
   </DisplayCode>)
 
+/* ======================== Dropdown ======================== */
+storiesOf('Dropdown', module)
+  .add('normal dropdown', () => <DisplayCode title='normal dropdown' code={`<Dropdown>
+      <SelectChoiceWrapper>apple</SelectChoiceWrapper>
+      <SelectChoiceWrapper>pear</SelectChoiceWrapper>
+    </Dropdown>`}>
+    <Dropdown>
+      <SelectChoiceWrapper>apple</SelectChoiceWrapper>
+      <SelectChoiceWrapper>pear</SelectChoiceWrapper>
+    </Dropdown>
+  </DisplayCode>)
+  .add('with button props', () => <DisplayCode title='with button props' code={`<Dropdown
+      buttonProps={{
+        text: 'Select one of fruit',
+      }}
+    >
+      <SelectChoiceWrapper>apple</SelectChoiceWrapper>
+      <SelectChoiceWrapper>pear</SelectChoiceWrapper>
+    </Dropdown>`}>
+    <Dropdown
+      buttonProps={{
+        text: 'Select one of fruit',
+      }}
+    >
+      <SelectChoiceWrapper>apple</SelectChoiceWrapper>
+      <SelectChoiceWrapper>pear</SelectChoiceWrapper>
+    </Dropdown>
+  </DisplayCode>)
+  .add('with collapse style', () => <DisplayCode title='with collapse style' code={`<Dropdown
+      collapse
+    >
+      <SelectChoiceWrapper>apple</SelectChoiceWrapper>
+      <SelectChoiceWrapper>pear</SelectChoiceWrapper>
+    </Dropdown>`}>
+    <Dropdown
+      collapse
+    >
+      <SelectChoiceWrapper>apple</SelectChoiceWrapper>
+      <SelectChoiceWrapper>pear</SelectChoiceWrapper>
+    </Dropdown>
+  </DisplayCode>)
+  .add('with margin', () => <DisplayCode title='with margin' code={`<Dropdown
+      buttonProps={{
+        text: 'Select one of fruit',
+      }}
+      margin='40px'
+    >
+      <SelectChoiceWrapper>apple</SelectChoiceWrapper>
+      <SelectChoiceWrapper>pear</SelectChoiceWrapper>
+    </Dropdown>`}>
+    <Dropdown
+      buttonProps={{
+        text: 'Select one of fruit',
+      }}
+      margin='40px'
+    >
+      <SelectChoiceWrapper>apple</SelectChoiceWrapper>
+      <SelectChoiceWrapper>pear</SelectChoiceWrapper>
+    </Dropdown>
+  </DisplayCode>)
+
 /* ======================== Select ======================== */
 storiesOf('Select', module)
   .add('with items', () => <DisplayCode title='send props data' code={`<Select
@@ -685,6 +750,9 @@ storiesOf('Loading', module)
   .add('with text', () => <DisplayCode title='with text' code={`<Loading text='Loading your profile ...' />`}>
     <Loading text='กำลังเข้าสู่ระบบ' />
   </DisplayCode>)
+  .add('with color', () => <DisplayCode title='with title data' code={`<Loading color={coralColor} />`}>
+    <Loading color={coralColor} />
+  </DisplayCode>)
   .add('with size', () => <DisplayCode title='with size' code={`<Loading large text='Loading your profile ...' />
 
   <Loading small text='Loading your profile ...' />`}>
@@ -694,7 +762,7 @@ storiesOf('Loading', module)
   .add('with vertical position', () => <DisplayCode title='with vertical position' code={`<Loading large vertical text='กำลังเข้าสู่ระบบ' />`}>
     <Loading large vertical text='กำลังเข้าสู่ระบบ' />
   </DisplayCode>)
-  .add('only load icon', () => <DisplayCode title='only load icon' code={`<LoadingIcon color={coralColor} />`}>
+  .add('only load icon with color', () => <DisplayCode title='only load icon' code={`<LoadingIcon color={coralColor} />`}>
     <LoadingIcon color={coralColor} />
   </DisplayCode>)
 

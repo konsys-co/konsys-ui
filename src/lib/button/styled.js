@@ -99,6 +99,11 @@ export const Btn = styled.button`
       border-radius: 0px;
     `}
   `}
+  ${props => props.spaceBetween && css`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `}
 `
 
 export default Btn

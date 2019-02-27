@@ -25,7 +25,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var LoadingWrapper = exports.LoadingWrapper = _styledComponents2.default.div(_templateObject, _variables.theme.fonts.size.normal, _variables.theme.fonts.family.normal, _variables.theme.color.primaryColor, _styled.IconStyled, _variables.theme.fonts.size.small, _variables.theme.color.primaryColor, function (props) {
   return props.vertical && (0, _styledComponents.css)(_templateObject2, _styled.IconStyled);
 }, function (props) {
-  return props.large && (0, _styledComponents.css)(_templateObject3, _variables.theme.fonts.size.title, _variables.theme.fonts.style.light, _styled.IconStyled, props.vertical ? '0 0 0.5em 0' : '0 0.5em 0 0', _variables.theme.fonts.size.normal);
+  return props.large && (0, _styledComponents.css)(_templateObject3, _variables.theme.fonts.size.title, _variables.theme.fonts.style.light, _styled.IconStyled, props.vertical ? '0 0 0.5em 0' : '0 0.5em 0 0', _variables.theme.fonts.size.subTitle);
 }, function (props) {
   return props.small && (0, _styledComponents.css)(_templateObject4, _variables.theme.fonts.size.small, _styled.IconStyled, props.vertical ? '0 0 0.5em 0' : '0 1em 0 0', _variables.theme.fonts.size.labell);
 });

@@ -11,7 +11,7 @@ var _templateObject = _taggedTemplateLiteral(['\n  padding: 8px 24px;\n  border-
     _templateObject4 = _taggedTemplateLiteral(['\n    border: 1px solid ', ';\n    background-color: ', ';\n    color: ', ';\n    > ', ',\n    > ', ' {\n      color: ', ';\n    }\n    &:hover {\n      background-color: ', ';\n      color: ', ';\n      > ', ',\n      > ', ' {\n        color: ', ';\n      }\n    }\n  '], ['\n    border: 1px solid ', ';\n    background-color: ', ';\n    color: ', ';\n    > ', ',\n    > ', ' {\n      color: ', ';\n    }\n    &:hover {\n      background-color: ', ';\n      color: ', ';\n      > ', ',\n      > ', ' {\n        color: ', ';\n      }\n    }\n  ']),
     _templateObject5 = _taggedTemplateLiteral(['\n    width: 100%;\n  '], ['\n    width: 100%;\n  ']),
     _templateObject6 = _taggedTemplateLiteral(['\n    font-size: ', ';\n    padding: 16px 48px;\n    > ', ' {\n      font-size: ', ';\n      margin: ', ';\n    }\n  '], ['\n    font-size: ', ';\n    padding: 16px 48px;\n    > ', ' {\n      font-size: ', ';\n      margin: ', ';\n    }\n  ']),
-    _templateObject7 = _taggedTemplateLiteral(['\n    font-size: ', ';\n    padding: 4px 16px;\n    border-radius: 2px;\n    > ', ' {\n      font-size: 0.5em;\n      margin: ', ';\n    }\n  '], ['\n    font-size: ', ';\n    padding: 4px 16px;\n    border-radius: 2px;\n    > ', ' {\n      font-size: 0.5em;\n      margin: ', ';\n    }\n  ']),
+    _templateObject7 = _taggedTemplateLiteral(['\n    padding: 4px 16px;\n    border-radius: 2px;\n    > ', ' {\n      font-size: 0.5em;\n      margin: ', ';\n    }\n    > ', ' {\n      font-size: ', ';\n    }\n  '], ['\n    padding: 4px 16px;\n    border-radius: 2px;\n    > ', ' {\n      font-size: 0.5em;\n      margin: ', ';\n    }\n    > ', ' {\n      font-size: ', ';\n    }\n  ']),
     _templateObject8 = _taggedTemplateLiteral(['\n    ', '\n    ', '\n  '], ['\n    ', '\n    ', '\n  ']),
     _templateObject9 = _taggedTemplateLiteral(['\n      border-radius: 40px;\n    '], ['\n      border-radius: 40px;\n    ']),
     _templateObject10 = _taggedTemplateLiteral(['\n      border-radius: 0px;\n    '], ['\n      border-radius: 0px;\n    ']);
@@ -62,7 +62,7 @@ var Btn = exports.Btn = _styledComponents2.default.button(_templateObject, butto
 }, function (props) {
   return props.large && (0, _styledComponents.css)(_templateObject6, props.theme.fonts ? props.theme.fonts.size.subTitle : _variables.fonts.size.subTitle, _styled.IconStyled, _variables.fonts.size.label, props.rightIcon ? '0 0 0 16px' : '0 16px 0 0');
 }, function (props) {
-  return props.small && (0, _styledComponents.css)(_templateObject7, props.theme.fonts ? props.theme.fonts.size.label : _variables.fonts.size.label, _styled.IconStyled, props.rightIcon ? '0 0 0 6px' : '0 6px 0 0');
+  return props.small && (0, _styledComponents.css)(_templateObject7, _styled.IconStyled, props.rightIcon ? '0 0 0 6px' : '0 6px 0 0', _text.P, _variables.theme.fonts.size.small);
 }, function (props) {
   return (0, _styledComponents.css)(_templateObject8, props.buttonStyle === 'round' && (0, _styledComponents.css)(_templateObject9), props.buttonStyle === 'rectangle' && (0, _styledComponents.css)(_templateObject10));
 });

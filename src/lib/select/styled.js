@@ -11,6 +11,7 @@ export const SelectListWrapper = styled.ul`
   position: absolute;
   left: 0;
   right: 0;
+  padding: ${props => (props.padding ? props.padding : '0 8px')};
 	&.hide {
 		max-height: 0;
 	}

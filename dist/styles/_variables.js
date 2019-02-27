@@ -60,7 +60,8 @@ var animate = exports.animate = {
   spin: (0, _styledComponents.keyframes)(_templateObject),
   time: {
     loading: '1s',
-    maxHeight: '0.5s'
+    maxHeight: '0.5s',
+    opacity: '0.2s'
   },
   transition: 'all 0.5s ease'
 
@@ -177,6 +178,9 @@ var animateTimeLoading = function animateTimeLoading(props) {
 var animateTimeMaxHeight = function animateTimeMaxHeight(props) {
   return props.theme.animate.time ? props.theme.animate.time.maxHeight : animate.time.maxHeight;
 };
+var animateTimeOpacity = function animateTimeOpacity(props) {
+  return props.theme.animate ? props.theme.animate.time.opacity : animate.time.opacity;
+};
 var animateTransition = function animateTransition(props) {
   return props.theme.animate ? props.theme.animate.transition : animate.time.transition;
 };
@@ -191,7 +195,9 @@ var theme = exports.theme = {
     success: successColor,
     error: errorColor,
     warning: warningColor,
-    paleGray: paleGray
+    paleGray: paleGray,
+    light: light,
+    lightGray: lightGray
   },
   shadow: {
     selectShadow: '0 0 20px'
@@ -221,7 +227,8 @@ var theme = exports.theme = {
     spin: animateSpin,
     time: {
       loading: animateTimeLoading,
-      maxHeight: animateTimeMaxHeight
+      maxHeight: animateTimeMaxHeight,
+      opacity: animateTimeOpacity
     },
     transition: animateTransition
   }

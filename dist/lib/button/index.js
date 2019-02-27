@@ -26,7 +26,11 @@ var Button = function Button(props) {
   return _react2.default.createElement(
     _styled.Btn,
     props,
-    props.onlyIcon ? _react2.default.createElement(_icon2.default, { key: 'button-icon', spin: props.spinIcon, icon: props.icon }) : props.icon ? props.rightIcon ? [_react2.default.createElement(
+    props.onlyIcon ? _react2.default.createElement(_icon2.default, { key: 'button-icon', spin: props.spinIcon, icon: props.icon }) : props.loading ? [_react2.default.createElement(_icon2.default, { key: 'button-icon', spin: true, icon: 'fal fa-spinner-third' }), _react2.default.createElement(
+      'span',
+      { key: 'button-text' },
+      props.loadingText ? props.loadingText : props.text ? props.text : 'Button text here'
+    )] : props.icon ? props.rightIcon ? [_react2.default.createElement(
       'span',
       { key: 'button-text' },
       props.text ? props.text : 'Button text here'
@@ -37,7 +41,7 @@ var Button = function Button(props) {
     )] : _react2.default.createElement(
       _text.P,
       { key: 'button-text' },
-      props.text ? props.text : 'Button text here เทส'
+      props.text ? props.text : 'Button text here'
     )
   );
 };
@@ -54,7 +58,9 @@ Button.propTypes = {
   ghost: _propTypes.bool,
   rightIcon: _propTypes.bool,
   onlyIcon: _propTypes.bool,
-  spinIcon: _propTypes.bool
+  spinIcon: _propTypes.bool,
+  loading: _propTypes.bool,
+  loadingText: _propTypes.string
 };
 
 exports.default = Button;

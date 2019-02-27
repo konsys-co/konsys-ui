@@ -13,7 +13,6 @@ import {
 } from './styled'
 import Collapse from './../collapse'
 
-
 class Select extends PureComponent {
 	constructor() {
 		super()
@@ -42,6 +41,8 @@ class Select extends PureComponent {
 					getMenuProps,
 					isOpen,
 					inputValue,
+          getToggleButtonProps,
+          getLabelProps,
 				}) => (
 					<span>
             <SelectWrapper collapse={this.props.collapse} width={this.props.width}>

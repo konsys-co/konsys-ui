@@ -7,7 +7,9 @@ import { Radio, Checkbox, RadioGroup, CheckboxGroup } from './lib/choice'
 import { H1, H2, H3, H4, P, SmallText, Label, TextLink } from './lib/text'
 import { Input, InputWithLabel } from './lib/input'
 import Select from './lib/select'
+import { SelectChoiceWrapper } from './lib/select/styled'
 import Collapse from './lib/collapse'
+import Dropdown from './lib/dropdown'
 
 class Document extends React.Component {
   render() {
@@ -25,6 +27,6 @@ export {
   Button, Icon, Loading, LoadingIcon, Radio, Checkbox, RadioGroup, CheckboxGroup,
   H1, H2, H3, H4, P, SmallText, Label,
   Input, InputWithLabel, TextLink,
-  Select, Collapse,
+  Select, Collapse, Dropdown, SelectChoiceWrapper,
 }
 export default Document;

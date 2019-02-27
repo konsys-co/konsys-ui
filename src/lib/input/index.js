@@ -49,7 +49,7 @@ export const InputWithLabel = props => (
 			}
 			<P bold={props.title.bold}>{props.title.text}</P>
 		</LabelWrapper>
-		<Input width={props.width && '100%'} {...props.input} />
+		<Input theme={props.theme} width={props.width && '100%'} {...props.input} />
 	</InputWithLabelWrapper>
 )
 InputWithLabel.propTypes = {

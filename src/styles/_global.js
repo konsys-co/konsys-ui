@@ -6,7 +6,10 @@ const GlobalStyle = createGlobalStyle`
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'kanit', 'helvetica';
+    font-family: kanit, 'helvetica';
+  }
+  p {
+    border: 1px solid red !important;
   }
   body {
     margin: 0;
