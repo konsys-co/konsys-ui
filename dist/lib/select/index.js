@@ -26,6 +26,10 @@ var _input = require('./../input/');
 
 var _text = require('./../text/');
 
+var _button = require('./../button');
+
+var _button2 = _interopRequireDefault(_button);
+
 var _variables = require('./../../styles/_variables');
 
 var _styled = require('./styled');
@@ -66,7 +70,9 @@ var Select = function (_PureComponent) {
           inputProps = _props.inputProps,
           color = _props.color,
           tree = _props.tree,
-          data = _props.data;
+          data = _props.data,
+          buttonProps = _props.buttonProps,
+          onlyDropdown = _props.onlyDropdown;
       var isOpen = this.state.isOpen;
 
       return _react2.default.createElement(
@@ -97,7 +103,16 @@ var Select = function (_PureComponent) {
             _react2.default.createElement(
               _styled.SelectWrapper,
               { collapse: _this2.props.collapse, width: _this2.props.width },
-              _react2.default.createElement(_input.Input, _extends({
+              onlyDropdown ? _react2.default.createElement(_button2.default, _extends({
+                spaceBetween: true,
+                fullWidth: true,
+                rightIcon: true,
+                icon: 'fas fa-caret-down',
+                onClick: function onClick() {
+                  return _this2.setState({ isOpen: true });
+                },
+                text: inputValue ? inputValue : ''
+              }, buttonProps)) : _react2.default.createElement(_input.Input, _extends({
                 width: '100%',
                 suffix: _react2.default.createElement(_icon2.default, { icon: 'suffix fas ' + (isOpen ? 'fa-caret-up' : 'fa-caret-down') }),
                 onClick: function onClick() {
@@ -128,6 +143,20 @@ var Select = function (_PureComponent) {
                         d.text
                       );
                     })
+                  );
+                }) : onlyDropdown ? data.map(function (item, index) {
+                  return _react2.default.createElement(
+                    _styled.SelectChoiceWrapper,
+                    _extends({}, getItemProps({
+                      key: item.text,
+                      index: index,
+                      item: item
+                    }), {
+                      active: item.text === inputValue,
+                      color: color
+                    }),
+                    item.icon && _react2.default.createElement(_icon2.default, { fontSize: '12px', icon: item.icon, margin: '0 8px 0 0' }),
+                    item.text
                   );
                 }) : data.filter(function (item) {
                   return !inputValue || item.text.includes(inputValue);

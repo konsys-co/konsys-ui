@@ -23,7 +23,7 @@ import {
 
 addDecorator(withNotes);
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+storiesOf('Welcome', module).add('to Storybook', () => <H4 textAlign='center' style={{ width: '100%', margin: 24 }}>KONSYS-UI Storybook v.0.8</H4>);
 
 const coralColor = '#FD7065'
 

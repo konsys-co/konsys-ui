@@ -1,5 +1,5 @@
 {
-  "name": "ks-common-components",
+  "name": "konsys-ui",
   "version": "0.0.23",
   "description": "",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "author": "",
   "license": "ISC",
