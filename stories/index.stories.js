@@ -534,6 +534,7 @@ storiesOf('Select', module)
     ]}
   />`}>
     <Select
+      onlyDropdown={true}
       data={[
         {value: 'apple', text: 'แอปเปิ้ล', icon: 'fas fa-apple-alt'},
         {value: 'pear', text: 'แพร์'},

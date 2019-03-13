@@ -7,6 +7,7 @@ import {
 import Icon from './../icon'
 import { Input } from './../input/'
 import { H4 } from './../text/'
+import Button from './../button'
 import { theme } from './../../styles/_variables'
 import {
 	SelectListWrapper, SelectChoiceWrapper, CenterText, SelectWrapper,
@@ -24,7 +25,7 @@ class Select extends PureComponent {
 	render() {
 		const {
       maxHeight, inputProps, color,
-      tree, data,
+      tree, data, buttonProps, onlyDropdown,
 		} = this.props
 		const { isOpen } = this.state
 		return (
@@ -46,13 +47,25 @@ class Select extends PureComponent {
 				}) => (
 					<span>
             <SelectWrapper collapse={this.props.collapse} width={this.props.width}>
-              <Input
-                width='100%'
-                suffix={<Icon icon={`suffix fas ${ isOpen ? 'fa-caret-up' : 'fa-caret-down' }`} />}
-                onClick={() => this.setState({ isOpen: true })}
-                {...getInputProps()}
-                {...inputProps}
-              />
+              {
+                onlyDropdown
+                  ? <Button
+                    spaceBetween
+                    fullWidth
+                    rightIcon
+                    icon="fas fa-caret-down"
+                    onClick={() => this.setState({ isOpen: true })}
+                    text={inputValue ? inputValue : ''}
+                    {...buttonProps}
+                  />
+                  : <Input
+                    width='100%'
+                    suffix={<Icon icon={`suffix fas ${ isOpen ? 'fa-caret-up' : 'fa-caret-down' }`} />}
+                    onClick={() => this.setState({ isOpen: true })}
+                    {...getInputProps()}
+                    {...inputProps}
+                  />
+              }
               <SelectListWrapper
                 maxHeight={maxHeight}
                 className={isOpen ? 'show' : 'hide'}
@@ -81,22 +94,39 @@ class Select extends PureComponent {
                     }
                     </Collapse>
                   ))
-                  : data.filter(item => !inputValue || item.text.includes(inputValue)).length > 0
-                  ? data.filter(item => !inputValue || item.text.includes(inputValue)).map((item, index) => (
+                  : onlyDropdown
+                    ? data.map((item, index) => (
                       <SelectChoiceWrapper
                         {...getItemProps({
                           key: item.text,
                           index,
                           item,
                         })}
+                        active={item.text === inputValue}
                         color={color}
                       >
                       {
                         item.icon && <Icon fontSize='12px' icon={item.icon} margin='0 8px 0 0' />
                       }
                         {item.text}
-                      </SelectChoiceWrapper>))
-                  : <CenterText><H4 color={theme.color.paleGray}>ไม่มีข้อมูล</H4></CenterText>
+                      </SelectChoiceWrapper>
+                    ))
+                    : data.filter(item => !inputValue || item.text.includes(inputValue)).length > 0
+                      ? data.filter(item => !inputValue || item.text.includes(inputValue)).map((item, index) => (
+                          <SelectChoiceWrapper
+                            {...getItemProps({
+                              key: item.text,
+                              index,
+                              item,
+                            })}
+                            color={color}
+                          >
+                          {
+                            item.icon && <Icon fontSize='12px' icon={item.icon} margin='0 8px 0 0' />
+                          }
+                            {item.text}
+                          </SelectChoiceWrapper>))
+                      : <CenterText><H4 color={theme.color.paleGray}>ไม่มีข้อมูล</H4></CenterText>
                 : null
               }
               </SelectListWrapper>

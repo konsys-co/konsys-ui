@@ -22,7 +22,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var LoadingWrapper = exports.LoadingWrapper = _styledComponents2.default.div(_templateObject, _variables.theme.fonts.size.normal, _variables.theme.fonts.family.normal, _variables.theme.color.primaryColor, _styled.IconStyled, _variables.theme.fonts.size.small, _variables.theme.color.primaryColor, function (props) {
+var LoadingWrapper = exports.LoadingWrapper = _styledComponents2.default.div(_templateObject, _variables.theme.fonts.size.normal, _variables.theme.fonts.family.normal, function (props) {
+  return props.color ? props.color : _variables.theme.color.primaryColor;
+}, _styled.IconStyled, _variables.theme.fonts.size.small, function (props) {
+  return props.color ? props.color : _variables.theme.color.primaryColor;
+}, function (props) {
   return props.vertical && (0, _styledComponents.css)(_templateObject2, _styled.IconStyled);
 }, function (props) {
   return props.large && (0, _styledComponents.css)(_templateObject3, _variables.theme.fonts.size.title, _variables.theme.fonts.style.light, _styled.IconStyled, props.vertical ? '0 0 0.5em 0' : '0 0.5em 0 0', _variables.theme.fonts.size.subTitle);

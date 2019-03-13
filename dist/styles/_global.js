@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  html {\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    font-family: \'kanit\', \'helvetica\';\n  }\n  body {\n    margin: 0;\n    padding: 0;\n  }\n  * {\n    outline: 0;\n    box-sizing: border-box;\n  }\n  ', '\n'], ['\n  html {\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    font-family: \'kanit\', \'helvetica\';\n  }\n  body {\n    margin: 0;\n    padding: 0;\n  }\n  * {\n    outline: 0;\n    box-sizing: border-box;\n  }\n  ', '\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  html {\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    font-family: kanit, \'helvetica\';\n  }\n  p {\n    border: 1px solid red !important;\n  }\n  body {\n    margin: 0;\n    padding: 0;\n  }\n  * {\n    outline: 0;\n    box-sizing: border-box;\n  }\n  ', '\n'], ['\n  html {\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    font-family: kanit, \'helvetica\';\n  }\n  p {\n    border: 1px solid red !important;\n  }\n  body {\n    margin: 0;\n    padding: 0;\n  }\n  * {\n    outline: 0;\n    box-sizing: border-box;\n  }\n  ', '\n']);
 
 var _styledComponents = require('styled-components');
 

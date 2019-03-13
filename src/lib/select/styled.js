@@ -48,6 +48,9 @@ export const SelectChoiceWrapper = styled.li`
       color: ${props.color};
     }
   `}
+  ${props => props.active && css`
+    background-color: ${theme.color.primaryColor}0D;
+  `}
 	&:hover {
     color: ${color.offWhite};
 		background-color: ${theme.color.primaryColor};

@@ -88,7 +88,9 @@ var Select = function (_PureComponent) {
               getItemProps = _ref.getItemProps,
               getMenuProps = _ref.getMenuProps,
               isOpen = _ref.isOpen,
-              inputValue = _ref.inputValue;
+              inputValue = _ref.inputValue,
+              getToggleButtonProps = _ref.getToggleButtonProps,
+              getLabelProps = _ref.getLabelProps;
           return _react2.default.createElement(
             'span',
             null,

@@ -78,7 +78,7 @@ var InputWithLabel = exports.InputWithLabel = function InputWithLabel(props) {
 				props.title.text
 			)
 		),
-		_react2.default.createElement(Input, _extends({ width: props.width && '100%' }, props.input))
+		_react2.default.createElement(Input, _extends({ theme: props.theme, width: props.width && '100%' }, props.input))
 	);
 };
 InputWithLabel.propTypes = {

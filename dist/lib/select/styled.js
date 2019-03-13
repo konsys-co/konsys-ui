@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CenterText = exports.SelectChoiceWrapper = exports.SelectWrapper = exports.SelectListWrapper = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\tmargin: 8px 0 0;\n\tborder-radius: 4px;\n\tbackground-color: ', ';\n\ttransition: max-height ', ' ease;\n  position: absolute;\n  left: 0;\n  right: 0;\n\t&.hide {\n\t\tmax-height: 0;\n\t}\n\t&.show {\n\t\theight: auto;\n\t\tpadding: ', ';\n\t\tbox-shadow: ', ' rgba(', ', 0.15)};\n\t\tmax-height: ', ';\n\t\toverflow: scroll;\n  }\n'], ['\n\tmargin: 8px 0 0;\n\tborder-radius: 4px;\n\tbackground-color: ', ';\n\ttransition: max-height ', ' ease;\n  position: absolute;\n  left: 0;\n  right: 0;\n\t&.hide {\n\t\tmax-height: 0;\n\t}\n\t&.show {\n\t\theight: auto;\n\t\tpadding: ', ';\n\t\tbox-shadow: ', ' rgba(', ', 0.15)};\n\t\tmax-height: ', ';\n\t\toverflow: scroll;\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n\tmargin: 8px 0 0;\n\tborder-radius: 4px;\n\tbackground-color: ', ';\n\ttransition: max-height ', ' ease;\n  position: absolute;\n  left: 0;\n  right: 0;\n  padding: ', ';\n\t&.hide {\n\t\tmax-height: 0;\n\t}\n\t&.show {\n\t\theight: auto;\n\t\tpadding: ', ';\n\t\tbox-shadow: ', ' rgba(', ', 0.15)};\n\t\tmax-height: ', ';\n\t\toverflow: scroll;\n  }\n'], ['\n\tmargin: 8px 0 0;\n\tborder-radius: 4px;\n\tbackground-color: ', ';\n\ttransition: max-height ', ' ease;\n  position: absolute;\n  left: 0;\n  right: 0;\n  padding: ', ';\n\t&.hide {\n\t\tmax-height: 0;\n\t}\n\t&.show {\n\t\theight: auto;\n\t\tpadding: ', ';\n\t\tbox-shadow: ', ' rgba(', ', 0.15)};\n\t\tmax-height: ', ';\n\t\toverflow: scroll;\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  position: relative;\n  width: ', ';\n  ', '\n'], ['\n  position: relative;\n  width: ', ';\n  ', '\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n    > ', ' {\n      position: relative;\n    }\n  '], ['\n    > ', ' {\n      position: relative;\n    }\n  ']),
     _templateObject4 = _taggedTemplateLiteral(['\n\tmargin: 0;\n\tpadding: 8px 16px;\n\tborder-radius: 4px;\n\tlist-style-type: none;\n\tcursor: pointer;\n\tdisplay: flex;\n  align-items: center;\n  ', '\n\t&:hover {\n    color: ', ';\n\t\tbackground-color: ', ';\n\t\t> ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n'], ['\n\tmargin: 0;\n\tpadding: 8px 16px;\n\tborder-radius: 4px;\n\tlist-style-type: none;\n\tcursor: pointer;\n\tdisplay: flex;\n  align-items: center;\n  ', '\n\t&:hover {\n    color: ', ';\n\t\tbackground-color: ', ';\n\t\t> ', ' {\n\t\t\tcolor: ', ';\n\t\t}\n\t}\n']),
@@ -25,6 +25,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var SelectListWrapper = exports.SelectListWrapper = _styledComponents2.default.ul(_templateObject, _variables.color.offWhite, _variables.animate.time.maxHeight, function (props) {
+	return props.padding ? props.padding : '0 8px';
+}, function (props) {
 	return props.padding ? props.padding : '8px';
 }, _variables.theme.shadow.selectShadow, _variables.theme.color.primaryColorRGB, function (props) {
 	return props.maxHeight ? props.maxHeight : '190px';

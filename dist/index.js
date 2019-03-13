@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Collapse = exports.Select = exports.TextLink = exports.InputWithLabel = exports.Input = exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.CheckboxGroup = exports.RadioGroup = exports.Checkbox = exports.Radio = exports.LoadingIcon = exports.Loading = exports.Icon = exports.Button = undefined;
+exports.SelectChoiceWrapper = exports.Dropdown = exports.Collapse = exports.Select = exports.TextLink = exports.InputWithLabel = exports.Input = exports.Label = exports.SmallText = exports.P = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.CheckboxGroup = exports.RadioGroup = exports.Checkbox = exports.Radio = exports.LoadingIcon = exports.Loading = exports.Icon = exports.Button = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -35,9 +35,15 @@ var _select = require('./lib/select');
 
 var _select2 = _interopRequireDefault(_select);
 
+var _styled = require('./lib/select/styled');
+
 var _collapse = require('./lib/collapse');
 
 var _collapse2 = _interopRequireDefault(_collapse);
+
+var _dropdown = require('./lib/dropdown');
+
+var _dropdown2 = _interopRequireDefault(_dropdown);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -96,4 +102,6 @@ exports.InputWithLabel = _input.InputWithLabel;
 exports.TextLink = _text.TextLink;
 exports.Select = _select2.default;
 exports.Collapse = _collapse2.default;
+exports.Dropdown = _dropdown2.default;
+exports.SelectChoiceWrapper = _styled.SelectChoiceWrapper;
 exports.default = Document;
