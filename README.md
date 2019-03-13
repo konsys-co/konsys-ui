@@ -4,5 +4,5 @@
 
 ## Deploy NPM
 
-- 
+- npm publish
 
